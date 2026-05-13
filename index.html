@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta Commerciale — L'Aretta Ristorante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --surface-alt: #F5F3EF;
+      --border: #E8E4DD;
+      --border-light: #F0EDE8;
+      --text: #1A1A18;
+      --text-secondary: #6B6860;
+      --text-muted: #9B978E;
+      --accent: #2D6A4F;
+      --accent-light: #D8F3DC;
+      --accent-dark: #1B4332;
+      --gold: #C8A96E;
+      --gold-light: #F5EFE0;
+      --highlight: #E76F51;
+      --highlight-light: #FFF0EC;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.03);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,248,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0 2rem;
+    }
+    .topbar-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .topbar-brands {
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .topbar-logo {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+    .topbar-x {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .topbar-links {
+      display: flex; align-items: center; gap: 1.25rem;
+    }
+    .topbar-links a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-links a:hover { color: var(--accent); }
+    .topbar-meta {
+      font-size: 0.8rem; color: var(--text-muted);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1200px; margin: 0 auto;
+      padding: 5rem 2rem 3.5rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+    .hero-meta {
+      margin-top: 2rem;
+      display: flex; gap: 2rem; flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .hero-meta-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 1200px; margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+    .section-desc {
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+    }
+    .divider {
+      max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    }
+    .divider hr {
+      border: none; border-top: 1px solid var(--border);
+    }
+
+    /* ── GRIDS ── */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .card-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .card-icon.green { background: var(--accent-light); }
+    .card-icon.gold { background: var(--gold-light); }
+    .card-icon.coral { background: var(--highlight-light); }
+    .card h3 {
+      font-weight: 600; font-size: 1.05rem; margin-bottom: 0.4rem;
+    }
+    .card p {
+      font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
+    }
+    .card-price {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .card-price .amount {
+      font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;
+    }
+    .card-price .period {
+      font-size: 0.85rem; color: var(--text-muted);
+    }
+    .card-price .type-badge {
+      margin-left: auto;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 0.25rem 0.6rem; border-radius: 100px;
+    }
+    .type-badge.once { background: var(--gold-light); color: #8B7340; }
+    .type-badge.monthly { background: var(--accent-light); color: var(--accent); }
+    .type-badge.variable { background: var(--highlight-light); color: var(--highlight); }
+
+    /* ── SOCIAL PACKAGES ── */
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .pkg-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .pkg-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .pkg-card.recommended {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md), 0 0 0 1px var(--accent);
+    }
+    .pkg-card.recommended::before {
+      content: 'Consigliato';
+      position: absolute;
+      top: -11px; left: 50%; transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 0.25rem 0.9rem; border-radius: 100px;
+    }
+    .pkg-name {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.3rem;
+    }
+    .pkg-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;
+    }
+    .pkg-price-row {
+      display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 1.25rem;
+    }
+    .pkg-price-row .amt {
+      font-size: 2rem; font-weight: 700; letter-spacing: -0.03em;
+    }
+    .pkg-price-row .per {
+      font-size: 0.85rem; color: var(--text-muted);
+    }
+    .pkg-features { list-style: none; }
+    .pkg-features li {
+      position: relative;
+      padding: 0.45rem 0 0.45rem 1.6rem;
+      font-size: 0.9rem; color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .pkg-features li:last-child { border-bottom: none; }
+    .pkg-features li::before {
+      content: ''; position: absolute;
+      left: 0; top: 50%; transform: translateY(-50%);
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent-light); border: 2px solid var(--accent);
+    }
+    .pkg-features li.disabled {
+      color: var(--text-muted); text-decoration: line-through; opacity: 0.5;
+    }
+    .pkg-features li.disabled::before {
+      background: var(--border); border-color: var(--text-muted);
+    }
+
+    /* ── TABLE ── */
+    .price-table {
+      width: 100%;
+      border-collapse: separate; border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .price-table thead th {
+      text-align: left;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted);
+      padding: 1rem 1.25rem;
+      background: var(--surface-alt);
+      border-bottom: 1px solid var(--border);
+    }
+    .price-table tbody td {
+      padding: 0.85rem 1.25rem; font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+    .price-table tbody tr:last-child td { border-bottom: none; }
+    .price-table .row-total td {
+      font-weight: 600;
+      background: var(--surface-alt);
+      border-top: 2px solid var(--border);
+    }
+    .price-table .price-cell {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* ── BONUS BOX ── */
+    .bonus-card {
+      background: linear-gradient(135deg, var(--surface-alt) 0%, var(--surface) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .bonus-card h4 {
+      font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .bonus-list { list-style: none; }
+    .bonus-list li {
+      padding: 0.5rem 0; font-size: 0.9rem; color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .bonus-list li:last-child { border-bottom: none; }
+    .bonus-list .bonus-value {
+      font-weight: 600; color: var(--accent); white-space: nowrap;
+    }
+
+    /* ── SERVICES OVERVIEW ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .service-card h3 {
+      font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .service-card p {
+      font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    /* ── BUNDLE ── */
+    .bundle-section {
+      background: var(--accent-dark);
+      border-radius: var(--radius);
+      padding: 3rem;
+      color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .bundle-section::before {
+      content: ''; position: absolute;
+      top: -50%; right: -20%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(200,169,110,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .bundle-label {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.5rem;
+    }
+    .bundle-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em;
+    }
+    .bundle-desc {
+      color: rgba(255,255,255,0.7); max-width: 600px; margin-bottom: 2rem;
+    }
+    .bundle-pricing {
+      display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: flex-end;
+      margin-bottom: 2rem; position: relative; z-index: 1;
+    }
+    .bundle-old {
+      font-size: 1.3rem; color: rgba(255,255,255,0.4); text-decoration: line-through;
+    }
+    .bundle-new {
+      font-size: 3rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1;
+    }
+    .bundle-new small {
+      font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.6); margin-left: 0.3rem;
+    }
+    .bundle-save {
+      background: var(--gold); color: var(--accent-dark);
+      font-size: 0.8rem; font-weight: 700;
+      padding: 0.4rem 1rem; border-radius: 100px;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .bundle-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem; position: relative; z-index: 1;
+    }
+    .bundle-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-sm); padding: 1.25rem;
+    }
+    .bundle-item h4 {
+      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .bundle-item p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.5;
+    }
+    .bundle-item .included { font-weight: 600; color: #fff; }
+
+    /* ── ROADMAP ── */
+    .roadmap { position: relative; padding-left: 2rem; }
+    .roadmap::before {
+      content: ''; position: absolute;
+      left: 7px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--gold));
+      border-radius: 2px;
+    }
+    .roadmap-item {
+      position: relative; padding: 0 0 2rem 1.5rem;
+    }
+    .roadmap-item:last-child { padding-bottom: 0; }
+    .roadmap-item::before {
+      content: ''; position: absolute;
+      left: -2rem; top: 6px;
+      width: 16px; height: 16px; border-radius: 50%;
+      background: var(--surface); border: 3px solid var(--accent);
+    }
+    .roadmap-item.active::before {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-light);
+    }
+    .roadmap-month {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.2rem;
+    }
+    .roadmap-title {
+      font-weight: 600; font-size: 1rem; margin-bottom: 0.3rem;
+    }
+    .roadmap-desc {
+      font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    /* ── CONDITIONS ── */
+    .conditions {
+      background: var(--surface-alt);
+      border-radius: var(--radius); padding: 2rem;
+    }
+    .conditions h3 {
+      font-size: 1rem; font-weight: 600; margin-bottom: 1rem;
+    }
+    .conditions-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem;
+    }
+    .condition-item {
+      font-size: 0.85rem; color: var(--text-secondary);
+      padding-left: 1.2rem; position: relative;
+    }
+    .condition-item::before {
+      content: ''; position: absolute;
+      left: 0; top: 0.55em;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--border);
+    }
+
+    /* ── NEGOTIABLE TAG ── */
+    .tag-trattabile {
+      display: inline-block;
+      background: var(--gold-light);
+      color: #8B7340;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 100px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      max-width: 1200px; margin: 0 auto;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 2rem;
+    }
+    .footer-col h4 {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem;
+    }
+    .footer-col a {
+      display: block; font-size: 0.85rem; color: var(--text-secondary);
+      text-decoration: none; padding: 0.15rem 0; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-copy {
+      text-align: center; margin-top: 2rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.8rem; color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.25rem 2rem; }
+      .section { padding: 2rem 1.25rem; }
+      .bundle-section { padding: 2rem 1.25rem; }
+      .bundle-new { font-size: 2.2rem; }
+      .hero-meta { gap: 1.25rem; }
+      .topbar { padding: 0 1.25rem; }
+      .topbar-links { display: none; }
+      .price-table { font-size: 0.85rem; }
+      .price-table thead th,
+      .price-table tbody td { padding: 0.65rem 0.75rem; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brands">
+        <img src="organiq-01.png" alt="Organiq" class="topbar-logo">
+        <span class="topbar-x">&times;</span>
+        <img src="haise.png" alt="Haise" class="topbar-logo">
+      </div>
+      <div class="topbar-links">
+        <a href="https://www.instagram.com/organiq_agency" target="_blank">@organiq_agency</a>
+        <a href="https://haise.it" target="_blank">haise.it</a>
+        <a href="https://www.instagram.com/nilo.lucarini" target="_blank">@nilo.lucarini</a>
+      </div>
+      <div class="topbar-meta">Maggio 2026</div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <div class="hero-badge">Proposta Commerciale</div>
+    <h1>Strategia Digitale<br>per <em>L'Aretta</em></h1>
+    <p class="hero-sub">
+      Un piano integrato di comunicazione organica, advertising per eventi e ottimizzazione tecnica per trasformare la presenza digitale del ristorante e massimizzare le prenotazioni.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <strong>Cliente</strong>
+        L'Aretta &mdash; Ristorante in Campagna
+      </div>
+      <div class="hero-meta-item">
+        <strong>Durata</strong>
+        6 mesi (Giu &ndash; Nov 2026)
+      </div>
+      <div class="hero-meta-item">
+        <strong>Sede</strong>
+        Roccantica (RI)
+      </div>
+    </div>
+  </header>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 01 — PACCHETTI SOCIAL ═══ -->
+  <section class="section" id="social">
+    <div class="section-label">01 &mdash; Social Media Organico</div>
+    <h2 class="section-title">Pacchetti di Gestione Social</h2>
+    <p class="section-desc">
+      Contenuti originali, produzione video e gestione della community per costruire un&rsquo;identit&agrave; forte e riconoscibile su Instagram e Facebook.
+    </p>
+
+    <div class="pkg-grid">
+      <!-- Base -->
+      <div class="pkg-card">
+        <div class="pkg-name">Organiq</div>
+        <div class="pkg-title">Base</div>
+        <div class="pkg-price-row">
+          <span class="amt">&euro;850</span>
+          <span class="per">/mese + IVA</span>
+        </div>
+        <ul class="pkg-features">
+          <li>2 video reel a settimana</li>
+          <li>1 carosello di immagini</li>
+          <li>Piano editoriale mensile</li>
+          <li>Ottimizzazione caption &amp; hashtag</li>
+          <li class="disabled">Community Management</li>
+          <li class="disabled">Stories &amp; Reportistica</li>
+        </ul>
+      </div>
+      <!-- Smart -->
+      <div class="pkg-card recommended">
+        <div class="pkg-name">Organiq</div>
+        <div class="pkg-title">Smart</div>
+        <div class="pkg-price-row">
+          <span class="amt">&euro;950</span>
+          <span class="per">/mese + IVA</span>
+        </div>
+        <ul class="pkg-features">
+          <li>3 video reel a settimana</li>
+          <li>1 carosello immagini/video</li>
+          <li>Piano editoriale mensile</li>
+          <li>Ottimizzazione caption &amp; hashtag</li>
+          <li>Community Management</li>
+          <li class="disabled">Stories &amp; Reportistica</li>
+        </ul>
+      </div>
+      <!-- Business -->
+      <div class="pkg-card">
+        <div class="pkg-name">Organiq</div>
+        <div class="pkg-title">Business</div>
+        <div class="pkg-price-row">
+          <span class="amt">&euro;1.320</span>
+          <span class="per">/mese + IVA</span>
+        </div>
+        <ul class="pkg-features">
+          <li>4 video reel a settimana</li>
+          <li>1 carosello immagini/video</li>
+          <li>Piano editoriale mensile</li>
+          <li>Ottimizzazione caption &amp; hashtag</li>
+          <li>Community Management</li>
+          <li>Stories &amp; Reportistica mensile</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bonus KPI Organici -->
+    <div style="margin-top: 1.5rem;">
+      <div class="bonus-card">
+        <h4>&#127942; Bonus Performance Organico</h4>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+          Compenso variabile aggiuntivo al raggiungimento dell&rsquo;obiettivo concordato.
+        </p>
+        <ul class="bonus-list">
+          <li>
+            <span>Raggiungimento 5.000 follower Instagram entro i 6 mesi</span>
+            <span class="bonus-value">+&euro;500 (una tantum)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 02 — COSA OFFRIAMO ═══ -->
+  <section class="section" id="servizi">
+    <div class="section-label">02 &mdash; Servizi Inclusi</div>
+    <h2 class="section-title">Oltre il Social: Setup, ADV &amp; Manutenzione</h2>
+    <p class="section-desc">
+      Tutto ci&ograve; che serve per costruire un ecosistema digitale completo &mdash; dalla presenza su Google alla promozione degli eventi, fino all&rsquo;automazione dei canali di contatto.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>&#127760; Ottimizzazione Sito Web</h3>
+        <p>Interventi mirati su struttura, UX e contenuti: ottimizzazione layout, pagine evento, men&ugrave; digitale e integrazione prenotazioni. Hosting e dominio esclusi.</p>
+      </div>
+      <div class="service-card">
+        <h3>&#128269; SEO + GEO &amp; AEO</h3>
+        <p>Ottimizzazione per Google e per i motori di ricerca AI (ChatGPT, Perplexity, AI Overviews). Schema markup, architettura URL, structured data avanzati.</p>
+      </div>
+      <div class="service-card">
+        <h3>&#128205; Google Business Profile</h3>
+        <p>Creazione e ottimizzazione scheda, categorie, attributi, gestione recensioni, Q&amp;A e review strategy.</p>
+      </div>
+      <div class="service-card">
+        <h3>&#128202; Analytics &amp; Tracking</h3>
+        <p>GA4, Meta Pixel, conversion tracking, eventi personalizzati, numeri di tracciamento, UTM setup e dashboard.</p>
+      </div>
+      <div class="service-card">
+        <h3>&#128640; Advertising Eventi</h3>
+        <p>Campagne Meta Ads per promuovere eventi, serate a tema e festivit&agrave;. Targeting, A/B testing, monitoring e report.</p>
+      </div>
+      <div class="service-card">
+        <h3>&#128172; Automazione WhatsApp &amp; DM</h3>
+        <p>Setup risposte automatiche, flussi di prenotazione e follow-up su WhatsApp Business e Instagram Direct per gestione lead in entrata.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 03 — PIANO OPERATIVO ═══ -->
+  <section class="section" id="roadmap">
+    <div class="section-label">03 &mdash; Piano Operativo</div>
+    <h2 class="section-title">Roadmap 6 Mesi</h2>
+    <p class="section-desc">
+      Tempistiche di attivazione e milestone principali dalla firma del contratto.
+    </p>
+
+    <div class="roadmap">
+      <div class="roadmap-item active">
+        <div class="roadmap-month">Giugno 2026 &mdash; Mese 1</div>
+        <div class="roadmap-title">Setup &amp; Lancio</div>
+        <div class="roadmap-desc">
+          Onboarding, audit tecnico, avvio ottimizzazione sito web. Setup GA4, Meta Pixel, Business Manager. Ottimizzazione Google Business Profile. Setup automazione WhatsApp &amp; DM. Primo piano editoriale e avvio produzione contenuti social.
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-month">Luglio 2026 &mdash; Mese 2</div>
+        <div class="roadmap-title">Go-Live Sito &amp; SEO</div>
+        <div class="roadmap-desc">
+          Go-live ottimizzazioni sito. Implementazione SEO on-page e schema markup. Setup GEO/AEO per motori AI. Prime campagne ADV per eventi estivi. Social a regime con pacchetto scelto.
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-month">Agosto 2026 &mdash; Mese 3</div>
+        <div class="roadmap-title">Ferragosto &amp; Peak Estivo</div>
+        <div class="roadmap-desc">
+          Campagne ADV intensive per Ferragosto e serate estive. Contenuti social ad alta frequenza. Monitoraggio conversioni e prima ottimizzazione campagne sulla base dei dati raccolti.
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-month">Settembre 2026 &mdash; Mese 4</div>
+        <div class="roadmap-title">Vendemmia &amp; Autunno</div>
+        <div class="roadmap-desc">
+          Transizione comunicazione verso temi autunnali: vendemmia, tartufo, cene a tema. ADV per eventi autunnali. Report trimestrale con analisi KPI e ottimizzazioni strategiche.
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-month">Ottobre 2026 &mdash; Mese 5</div>
+        <div class="roadmap-title">Halloween &amp; Festivit&agrave;</div>
+        <div class="roadmap-desc">
+          Campagne per Halloween, castagne, serate a tema. Rafforzamento SEO locale con contenuti stagionali. Ottimizzazione audience ADV basata su 4 mesi di dati.
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-month">Novembre 2026 &mdash; Mese 6</div>
+        <div class="roadmap-title">Chiusura &amp; Review</div>
+        <div class="roadmap-desc">
+          Campagne per San Martino e pre-Natale. Report finale completo: risultati SEO, social growth, ROAS advertising, lead generati. Proposta di rinnovo con strategia aggiornata.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 04 — SETUP TECNICO (PRICING) ═══ -->
+  <section class="section" id="setup-pricing">
+    <div class="section-label">04 &mdash; Dettaglio Economico</div>
+    <h2 class="section-title">Setup Tecnico</h2>
+    <p class="section-desc">
+      Interventi una tantum per costruire le fondamenta tecniche: sito web, SEO, ottimizzazione AI, tracciamento e automazione.
+    </p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th style="width:50%">Voce</th>
+          <th>Dettaglio</th>
+          <th class="price-cell">Prezzo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ottimizzazione Sito Web</strong></td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Interventi su struttura, UX e contenuti del sito esistente: layout, pagine evento, men&ugrave; digitale, prenotazioni</td>
+          <td class="price-cell">&euro;850</td>
+        </tr>
+        <tr>
+          <td><strong>SEO + GEO &amp; AEO Setup</strong></td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">SEO on-page e tecnica, schema markup, ottimizzazione AI Overviews, ChatGPT Search, Perplexity</td>
+          <td class="price-cell">&euro;1.000</td>
+        </tr>
+        <tr>
+          <td><strong>GBP + Analytics &amp; Tracking</strong></td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Google Business Profile, GA4, Meta Pixel, conversion tracking, numeri di tracciamento, UTM</td>
+          <td class="price-cell">&euro;400</td>
+        </tr>
+        <tr>
+          <td><strong>Setup Campagne ADV</strong></td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Business Manager, audience building, creativit&agrave; base, A/B test framework, catalogo eventi</td>
+          <td class="price-cell">&euro;500</td>
+        </tr>
+        <tr>
+          <td><strong>Automazione WhatsApp &amp; DM</strong></td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Flussi automatici WhatsApp Business e Instagram DM, risposte rapide, prenotazione e follow-up</td>
+          <td class="price-cell">&euro;650</td>
+        </tr>
+        <tr class="row-total">
+          <td colspan="2"><strong>Totale Setup Una Tantum</strong></td>
+          <td class="price-cell"><strong>&euro;3.400</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 05 — ADVERTISING (PRICING) ═══ -->
+  <section class="section" id="adv-pricing">
+    <div class="section-label">05 &mdash; Advertising &amp; Eventi</div>
+    <h2 class="section-title">Gestione Campagne</h2>
+    <p class="section-desc">
+      Strategia pubblicitaria su Meta focalizzata sulla promozione di eventi, serate a tema e festivit&agrave; &mdash; dove il ristorante genera i margini pi&ugrave; alti.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon gold">&#128640;</div>
+        <h3>Gestione Campagne ADV <span class="tag-trattabile">Trattabile</span></h3>
+        <p>Pianificazione, creazione e ottimizzazione campagne Meta Ads. Include: strategia per evento, copy, targeting, monitoring giornaliero, report settimanale.</p>
+        <div class="card-price">
+          <span class="amount">&euro;350</span>
+          <span class="period">/mese + IVA</span>
+          <span class="type-badge monthly">Mensile</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon coral">&#127919;</div>
+        <h3>Budget Media (a carico cliente)</h3>
+        <p>Budget pubblicitario consigliato per raggiungere la copertura ottimale nella zona. Il budget resta interamente sotto il controllo del cliente.</p>
+        <div class="card-price">
+          <span class="amount">&euro;800 &ndash; 1.500</span>
+          <span class="period">/mese consigliato</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bonus ADV -->
+    <div style="margin-top: 1.5rem;">
+      <div class="bonus-card">
+        <h4>&#128176; Bonus Performance Advertising <span class="tag-trattabile">Trattabile</span></h4>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+          Incentivo a risultato per allineare gli obiettivi. Calcolato sul fatturato incrementale generato dagli eventi promossi via ADV. Modalit&agrave; e soglie definibili in fase di accordo.
+        </p>
+        <ul class="bonus-list">
+          <li>
+            <span>Prenotazioni evento tracciate da campagne ADV</span>
+            <span class="bonus-value">12% sul fatturato evento</span>
+          </li>
+          <li>
+            <span>Superamento target ROAS concordato (&gt;4x)</span>
+            <span class="bonus-value">+&euro;200/evento</span>
+          </li>
+          <li>
+            <span>Lead qualificati oltre obiettivo mensile</span>
+            <span class="bonus-value">&euro;5/lead aggiuntivo</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 06 — GESTIONE CONTINUATIVA (PRICING) ═══ -->
+  <section class="section" id="gestione-pricing">
+    <div class="section-label">06 &mdash; Gestione Continuativa</div>
+    <h2 class="section-title">Manutenzione &amp; Monitoraggio</h2>
+    <p class="section-desc">
+      Attivit&agrave; ricorrenti per mantenere il sito performante, la SEO aggiornata e il profilo Google ottimizzato nel tempo.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon green">&#128295;</div>
+        <h3>Manutenzione Sito &amp; SEO Monitoring</h3>
+        <p>Aggiornamenti contenuti, nuove pagine evento, backup, monitoraggio uptime. Monitoraggio posizionamenti SEO/AEO, report mensile ranking e visibilit&agrave;.</p>
+        <div class="card-price">
+          <span class="amount">&euro;150</span>
+          <span class="period">/mese</span>
+          <span class="type-badge monthly">Mensile</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon gold">&#11088;</div>
+        <h3>Google Business Profile</h3>
+        <p>Aggiornamento settimanale post GBP, gestione recensioni, foto, aggiornamenti orari ed eventi.</p>
+        <div class="card-price">
+          <span class="amount">&euro;100</span>
+          <span class="period">/mese</span>
+          <span class="type-badge monthly">Mensile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 07 — RIEPILOGO ═══ -->
+  <section class="section" id="riepilogo">
+    <div class="section-label">07 &mdash; Riepilogo Economico</div>
+    <h2 class="section-title">Tutte le Componenti a Listino</h2>
+    <p class="section-desc">
+      Ogni voce &egrave; acquistabile singolarmente. I prezzi sono al netto di IVA. Il budget media ADV &egrave; escluso e resta a carico del cliente.
+    </p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Tipo</th>
+          <th class="price-cell">Prezzo Unitario</th>
+          <th class="price-cell">Tot. 6 Mesi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ottimizzazione Sito Web</strong></td>
+          <td><span class="type-badge once">Una tantum</span></td>
+          <td class="price-cell">&euro;850</td>
+          <td class="price-cell">&euro;850</td>
+        </tr>
+        <tr>
+          <td><strong>SEO + GEO &amp; AEO Setup</strong></td>
+          <td><span class="type-badge once">Una tantum</span></td>
+          <td class="price-cell">&euro;1.000</td>
+          <td class="price-cell">&euro;1.000</td>
+        </tr>
+        <tr>
+          <td><strong>GBP + Analytics &amp; Tracking</strong></td>
+          <td><span class="type-badge once">Una tantum</span></td>
+          <td class="price-cell">&euro;400</td>
+          <td class="price-cell">&euro;400</td>
+        </tr>
+        <tr>
+          <td><strong>Setup Campagne ADV</strong></td>
+          <td><span class="type-badge once">Una tantum</span></td>
+          <td class="price-cell">&euro;500</td>
+          <td class="price-cell">&euro;500</td>
+        </tr>
+        <tr>
+          <td><strong>Automazione WhatsApp &amp; DM</strong></td>
+          <td><span class="type-badge once">Una tantum</span></td>
+          <td class="price-cell">&euro;650</td>
+          <td class="price-cell">&euro;650</td>
+        </tr>
+        <tr>
+          <td><strong>Social Organico (Smart)</strong></td>
+          <td><span class="type-badge monthly">Mensile</span></td>
+          <td class="price-cell">&euro;950/mese</td>
+          <td class="price-cell">&euro;5.700</td>
+        </tr>
+        <tr>
+          <td><strong>Gestione Campagne ADV</strong></td>
+          <td><span class="type-badge monthly">Mensile</span></td>
+          <td class="price-cell">&euro;350/mese</td>
+          <td class="price-cell">&euro;2.100</td>
+        </tr>
+        <tr>
+          <td><strong>Manutenzione Sito &amp; SEO Monitoring</strong></td>
+          <td><span class="type-badge monthly">Mensile</span></td>
+          <td class="price-cell">&euro;150/mese</td>
+          <td class="price-cell">&euro;900</td>
+        </tr>
+        <tr>
+          <td><strong>Google Business Profile Gestione</strong></td>
+          <td><span class="type-badge monthly">Mensile</span></td>
+          <td class="price-cell">&euro;100/mese</td>
+          <td class="price-cell">&euro;600</td>
+        </tr>
+        <tr class="row-total">
+          <td colspan="3"><strong>Totale a Listino (6 mesi)</strong></td>
+          <td class="price-cell"><strong>&euro;12.700</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:1rem;">
+      * Tutti i prezzi sono al netto di IVA. Budget media ADV escluso. Bonus performance non inclusi nel totale.
+    </p>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ 08 — PACCHETTO ALL-INCLUSIVE ═══ -->
+  <section class="section" id="bundle">
+    <div class="bundle-section">
+      <div class="bundle-label">Pacchetto Esclusivo</div>
+      <h2 class="bundle-title">Proposta All-Inclusive 6 Mesi</h2>
+      <p class="bundle-desc">
+        Tutte le componenti in un unico accordo con impegno semestrale. Setup completo, gestione social Smart, advertising eventi, automazione, SEO e manutenzione inclusi. Un unico canone mensile semplificato.
+      </p>
+
+      <div class="bundle-pricing">
+        <div>
+          <div class="bundle-old">&euro;12.700 a listino</div>
+          <div class="bundle-new">&euro;9.500<small>+ IVA &mdash; tot. 6 mesi</small></div>
+        </div>
+        <div class="bundle-save">Risparmi &euro;3.200 (&minus;25%)</div>
+      </div>
+
+      <div style="margin-bottom:2rem; position:relative; z-index:1;">
+        <p style="color:rgba(255,255,255,0.5); font-size:0.85rem; margin-bottom:0.3rem;">Oppure mensilizzato</p>
+        <p style="font-size:1.6rem; font-weight:700; letter-spacing:-0.02em;">
+          &euro;1.585<span style="font-size:0.85rem; font-weight:400; color:rgba(255,255,255,0.6);">/mese + IVA per 6 mesi</span>
+        </p>
+        <p style="color:rgba(255,255,255,0.45); font-size:0.8rem; margin-top:0.3rem;">
+          Include setup tecnico rateizzato + tutte le gestioni mensili. Budget media ADV escluso.
+        </p>
+      </div>
+
+      <div class="bundle-grid">
+        <div class="bundle-item">
+          <h4>Setup Tecnico Incluso</h4>
+          <p><span class="included">Ottimizzazione sito, SEO, GEO/AEO, Analytics, Google Business Profile, Setup ADV, Automazione WhatsApp &amp; DM</span> &mdash; tutto compreso nel canone</p>
+        </div>
+        <div class="bundle-item">
+          <h4>Social Organico Smart</h4>
+          <p><span class="included">3 reel/settimana, 1 carosello, Community Management</span> + piano editoriale mensile</p>
+        </div>
+        <div class="bundle-item">
+          <h4>Advertising Eventi</h4>
+          <p><span class="included">Gestione campagne completa</span> per ogni evento/festivit&agrave; del semestre + bonus performance</p>
+        </div>
+        <div class="bundle-item">
+          <h4>Manutenzione &amp; Monitoring</h4>
+          <p><span class="included">Sito, SEO/AEO monitoring, GBP</span> &mdash; aggiornamenti e report mensili inclusi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ CONDIZIONI ═══ -->
+  <section class="section" id="condizioni">
+    <div class="conditions">
+      <h3>Condizioni &amp; Note</h3>
+      <div class="conditions-list">
+        <div class="condition-item">Tutti i prezzi sono al netto di IVA (22%)</div>
+        <div class="condition-item">Budget media pubblicitario a carico del cliente (consigliato &euro;800&ndash;1.500/mese)</div>
+        <div class="condition-item">Hosting e dominio del sito web a carico del cliente</div>
+        <div class="condition-item">Eventuali piattaforme di CRM, gestione contatti o software gestionali non sono inclusi nella presente proposta e restano a carico del cliente; il nostro intervento si concentra sugli strumenti di automazione dei canali di contatto (WhatsApp Business, DM)</div>
+        <div class="condition-item">La componente economica relativa alla gestione campagne ADV e ai bonus performance advertising &egrave; da intendersi come base di partenza trattabile in fase di accordo</div>
+        <div class="condition-item">I bonus performance sono calcolati e liquidati mensilmente</div>
+        <div class="condition-item">Impegno minimo: 6 mesi per il pacchetto All-Inclusive</div>
+        <div class="condition-item">La produzione foto/video richiede accesso al locale per le sessioni di shooting e la disponibilit&agrave; di uno o pi&ugrave; volti da parte della propriet&agrave;</div>
+        <div class="condition-item">Tutti i contenuti vengono sottoposti ad approvazione e inviati al cliente almeno 24 ore prima della pubblicazione programmata</div>
+        <div class="condition-item">Il volume settimanale di video &egrave; garantito come da pacchetto scelto; la cadenza di pubblicazione del piano editoriale organico pu&ograve; essere modulata strategicamente per massimizzare la reach &mdash; in caso di contenuti ad alta trazione algoritmica, la distribuzione viene ottimizzata per evitare cannibalizzazione di copertura tra pubblicazioni ravvicinate</div>
+        <div class="condition-item">Validit&agrave; proposta: 15 giorni dalla data di emissione</div>
+        <div class="condition-item">I pacchetti sono soggetti a variazioni in relazione a eventuali personalizzazioni</div>
+        <div class="condition-item">Siamo disponibili a discutere ogni aspetto della proposta per trovare la soluzione pi&ugrave; adatta alle vostre esigenze</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Organiq</h4>
+        <a href="https://www.instagram.com/organiq_agency" target="_blank">@organiq_agency</a>
+      </div>
+      <div class="footer-col">
+        <h4>Haise</h4>
+        <a href="https://haise.it" target="_blank">haise.it</a>
+        <a href="https://www.instagram.com/nilo.lucarini" target="_blank">@nilo.lucarini</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>Organiq &times; Haise &mdash; Proposta riservata per L&rsquo;Aretta &mdash; Maggio 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
