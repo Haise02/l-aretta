@@ -497,6 +497,131 @@
       background: var(--border);
     }
 
+    /* ── ROI CHART ── */
+    .roi-chart {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .roi-assumptions {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .roi-assumption {
+      background: var(--surface-alt);
+      border-radius: var(--radius-sm);
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .roi-assumption strong {
+      color: var(--text);
+      display: block;
+      font-size: 0.9rem;
+    }
+    .roi-bars {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr auto;
+      gap: 0.5rem 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .roi-month-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .roi-bar-wrap {
+      height: 28px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface-alt);
+      position: relative;
+    }
+    .roi-bar {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 0 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      min-width: fit-content;
+    }
+    .roi-bar.invest { background: var(--text-muted); }
+    .roi-bar.revenue { background: var(--accent); }
+    .roi-roas {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: right;
+      white-space: nowrap;
+    }
+    .roi-roas.negative { color: var(--highlight); }
+    .roi-legend {
+      display: flex; gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .roi-legend-item {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; color: var(--text-secondary);
+    }
+    .roi-legend-dot {
+      width: 10px; height: 10px; border-radius: 3px;
+    }
+    .roi-legend-dot.invest { background: var(--text-muted); }
+    .roi-legend-dot.revenue { background: var(--accent); }
+    .roi-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+    .roi-summary-item {
+      text-align: center;
+    }
+    .roi-summary-item .val {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .roi-summary-item .val.highlight { color: var(--accent-dark); }
+    .roi-summary-item .label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── BU DISCLAIMER ── */
+    .bu-disclaimer {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--surface) 100%);
+      border: 1px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .bu-disclaimer h3 {
+      font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;
+      color: var(--accent-dark);
+    }
+    .bu-disclaimer p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .bu-disclaimer p + p { margin-top: 0.6rem; }
+
     /* ── NEGOTIABLE TAG ── */
     .tag-trattabile {
       display: inline-block;
@@ -689,11 +814,11 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>&#127760; Ottimizzazione Sito Web</h3>
-        <p>Interventi mirati su struttura, UX e contenuti: ottimizzazione layout, pagine evento, men&ugrave; digitale e integrazione prenotazioni. Hosting e dominio esclusi.</p>
+        <p>Pulizia design on-page, miglioramento UX e contenuti. Pagine evento personalizzate con funnel di conversione a prenotazione, men&ugrave; digitale aggiornabile. Hosting e dominio esclusi.</p>
       </div>
       <div class="service-card">
-        <h3>&#128269; SEO + GEO &amp; AEO</h3>
-        <p>Ottimizzazione per Google e per i motori di ricerca AI (ChatGPT, Perplexity, AI Overviews). Schema markup, architettura URL, structured data avanzati.</p>
+        <h3>&#128269; SEO + GEO &amp; AEO (Setup)</h3>
+        <p>Configurazione iniziale: architettura URL, schema markup, meta tag, structured data per Google e motori AI (ChatGPT, Perplexity, AI Overviews). Un intervento una tantum che costruisce le fondamenta della visibilit&agrave; online.</p>
       </div>
       <div class="service-card">
         <h3>&#128205; Google Business Profile</h3>
@@ -791,12 +916,12 @@
       <tbody>
         <tr>
           <td><strong>Ottimizzazione Sito Web</strong></td>
-          <td style="color:var(--text-secondary); font-size:0.85rem;">Interventi su struttura, UX e contenuti del sito esistente: layout, pagine evento, men&ugrave; digitale, prenotazioni</td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Pulizia design on-page, UX, pagine evento con funnel prenotazione, men&ugrave; digitale aggiornabile</td>
           <td class="price-cell">&euro;850</td>
         </tr>
         <tr>
           <td><strong>SEO + GEO &amp; AEO Setup</strong></td>
-          <td style="color:var(--text-secondary); font-size:0.85rem;">SEO on-page e tecnica, schema markup, ottimizzazione AI Overviews, ChatGPT Search, Perplexity</td>
+          <td style="color:var(--text-secondary); font-size:0.85rem;">Configurazione iniziale: architettura URL, schema markup, structured data, ottimizzazione AI search (una tantum)</td>
           <td class="price-cell">&euro;1.000</td>
         </tr>
         <tr>
@@ -880,6 +1005,111 @@
     </div>
   </section>
 
+  <!-- ═══ PROIEZIONE ROI ═══ -->
+  <section class="section" id="roi">
+    <div class="section-label">Proiezione</div>
+    <h2 class="section-title">Ritorno sull&rsquo;Investimento ADV</h2>
+    <p class="section-desc">
+      Stima conservativa del ritorno economico generato dalle campagne advertising per eventi, basata su benchmark di settore per la ristorazione con eventi a men&ugrave; fisso.
+    </p>
+
+    <div class="roi-chart">
+      <!-- Assumptions -->
+      <div class="roi-assumptions">
+        <div class="roi-assumption">
+          <strong>&euro;30 &ndash; 40</strong>
+          Scontrino medio/coperto
+        </div>
+        <div class="roi-assumption">
+          <strong>100 &ndash; 150</strong>
+          Coperti per evento
+        </div>
+        <div class="roi-assumption">
+          <strong>&euro;4 &ndash; 6</strong>
+          Costo per lead (CPL)
+        </div>
+        <div class="roi-assumption">
+          <strong>30 &ndash; 45%</strong>
+          Tasso conversione lead
+        </div>
+        <div class="roi-assumption">
+          <strong>&euro;1.000</strong>
+          Budget ADV medio/mese
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="roi-legend">
+        <div class="roi-legend-item">
+          <div class="roi-legend-dot invest"></div>
+          Investimento ADV (budget + gestione)
+        </div>
+        <div class="roi-legend-item">
+          <div class="roi-legend-dot revenue"></div>
+          Ricavo stimato da eventi
+        </div>
+      </div>
+
+      <!-- Bars -->
+      <div class="roi-bars">
+        <!-- Giu -->
+        <div class="roi-month-label">Giu</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.350</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:42%">&euro;2.100</div></div>
+        <div class="roi-roas">1.6x</div>
+        <!-- Lug -->
+        <div class="roi-month-label">Lug</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.350</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:66%">&euro;3.360</div></div>
+        <div class="roi-roas">2.5x</div>
+        <!-- Ago -->
+        <div class="roi-month-label">Ago</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.550</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:90%">&euro;4.550</div></div>
+        <div class="roi-roas">2.9x</div>
+        <!-- Set -->
+        <div class="roi-month-label">Set</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.350</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:78%">&euro;3.920</div></div>
+        <div class="roi-roas">2.9x</div>
+        <!-- Ott -->
+        <div class="roi-month-label">Ott</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.350</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:88%">&euro;4.480</div></div>
+        <div class="roi-roas">3.3x</div>
+        <!-- Nov -->
+        <div class="roi-month-label">Nov</div>
+        <div class="roi-bar-wrap"><div class="roi-bar invest" style="width:100%">&euro;1.550</div></div>
+        <div class="roi-bar-wrap"><div class="roi-bar revenue" style="width:100%">&euro;5.040</div></div>
+        <div class="roi-roas">3.3x</div>
+      </div>
+
+      <!-- Summary -->
+      <div class="roi-summary">
+        <div class="roi-summary-item">
+          <div class="val" style="color:var(--text-muted)">&euro;8.500</div>
+          <div class="label">Investimento Totale ADV</div>
+        </div>
+        <div class="roi-summary-item">
+          <div class="val highlight">&euro;23.450</div>
+          <div class="label">Ricavo Stimato</div>
+        </div>
+        <div class="roi-summary-item">
+          <div class="val">&euro;14.950</div>
+          <div class="label">Margine Netto ADV</div>
+        </div>
+        <div class="roi-summary-item">
+          <div class="val">2.8x</div>
+          <div class="label">ROAS Medio</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-top:1rem; line-height:1.5;">
+      * Proiezione indicativa basata su benchmark di settore. I risultati effettivi dipendono da stagionalit&agrave;, tipologia evento, capacit&agrave; del locale e budget media investito. L&rsquo;investimento ADV include il budget media (a carico del cliente) e la fee di gestione campagne. Il ROAS viene calcolato sul solo investimento pubblicitario.
+    </p>
+  </section>
+
   <div class="divider"><hr></div>
 
   <!-- ═══ 06 — GESTIONE CONTINUATIVA (PRICING) ═══ -->
@@ -894,7 +1124,7 @@
       <div class="card">
         <div class="card-icon green">&#128295;</div>
         <h3>Manutenzione Sito &amp; SEO Monitoring</h3>
-        <p>Aggiornamenti contenuti, nuove pagine evento, backup, monitoraggio uptime. Monitoraggio posizionamenti SEO/AEO, report mensile ranking e visibilit&agrave;.</p>
+        <p>Aggiornamento contenuti e nuove pagine evento, backup e uptime. Lato SEO: monitoraggio continuo dei posizionamenti, aggiornamento contenuti per mantenere la visibilit&agrave; su Google e AI search, report mensile. Il setup costruisce le fondamenta, il monitoring le mantiene attive.</p>
         <div class="card-price">
           <span class="amount">&euro;150</span>
           <span class="period">/mese</span>
@@ -1072,6 +1302,19 @@
         <div class="condition-item">I pacchetti sono soggetti a variazioni in relazione a eventuali personalizzazioni</div>
         <div class="condition-item">Siamo disponibili a discutere ogni aspetto della proposta per trovare la soluzione pi&ugrave; adatta alle vostre esigenze</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ DISCLAIMER BUSINESS UNIT ═══ -->
+  <section class="section" id="altre-bu">
+    <div class="bu-disclaimer">
+      <h3>Nota su ulteriori unit&agrave; di business (Alloggio &amp; Ospitalit&agrave;)</h3>
+      <p>
+        La presente proposta &egrave; strutturata per l&rsquo;attivit&agrave; di ristorazione ed eventi de L&rsquo;Aretta. Per eventuali evolutive legate ad altre unit&agrave; di business &mdash; come l&rsquo;alloggio, l&rsquo;affitto camere o la locazione dell&rsquo;intera struttura per eventi privati &mdash; siamo a disposizione per la produzione di contenuti organici e campagne paid ad hoc, escluso il setup tecnico (SEO, sito e simili).
+      </p>
+      <p>
+        Per quanto riguarda l&rsquo;advertising: il traffico e i funnel di conversione previsti nel pacchetto possono essere reindirizzati sulla seconda unit&agrave; di business in base alle priorit&agrave; stagionali, ma non sommati. L&rsquo;aggiunta di un funnel dedicato o di eventi di conversione aggiuntivi rispetto a quanto previsto sar&agrave; oggetto di un preventivo separato.
+      </p>
     </div>
   </section>
 
