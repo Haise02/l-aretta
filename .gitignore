@@ -1,0 +1,22 @@
+# Windows
+desktop.ini
+Thumbs.db
+ehthumbs.db
+*.tmp
+
+# macOS
+.DS_Store
+
+# Skill file Cowork (contiene istruzioni private)
+preventivi.skill
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Duplicato di test scaricato durante lo sviluppo
+assets/test-*.jpg
