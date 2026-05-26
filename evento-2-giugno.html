@@ -19,7 +19,7 @@
   "@context": "https://schema.org",
   "@type": "FoodEvent",
   "name": "2 Giugno in campagna a L'Aretta",
-  "description": "Pranzo della Festa della Repubblica con menù fisso della tradizione sabina, dalle 12:30 in poi.",
+  "description": "Pranzo della Festa della Repubblica con menù fisso della tradizione locale, dalle 12:30 in poi.",
   "startDate": "2026-06-02T12:30:00+02:00",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
@@ -254,7 +254,10 @@ a { color: inherit; text-decoration: none; }
   width: 100%; height: 100%;
   object-fit: cover;
   border: 0;
+  pointer-events: none; /* impedisce pause/play da click utente */
+  user-select: none;
 }
+.hero-bg-video video::-webkit-media-controls { display: none !important; }
 .hero-bg-video::before {
   /* film grain overlay */
   content: ''; position: absolute; inset: 0;
@@ -799,6 +802,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   padding: 36px 28px;
   box-shadow: var(--shadow);
+  scroll-margin-top: 90px; /* spazio sotto la topbar quando si clicca "Prenota" */
 }
 @media (min-width: 720px) { .form { padding: 48px 44px; } }
 
@@ -1050,11 +1054,11 @@ body { padding-bottom: 80px; }
 <!-- ============ MARQUEE (sotto topbar) ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span class="marquee-item">Cucina della tradizione sabina</span>
+    <span class="marquee-item">Cucina della tradizione locale</span>
     <span class="marquee-item">Ulivi secolari, terra rossa, niente fretta</span>
     <span class="marquee-item">A 50 minuti da Roma</span>
     <span class="marquee-item">Posti limitati — prenota in tempo</span>
-    <span class="marquee-item">Cucina della tradizione sabina</span>
+    <span class="marquee-item">Cucina della tradizione locale</span>
     <span class="marquee-item">Ulivi secolari, terra rossa, niente fretta</span>
     <span class="marquee-item">A 50 minuti da Roma</span>
     <span class="marquee-item">Posti limitati — prenota in tempo</span>
@@ -1064,10 +1068,16 @@ body { padding-bottom: 80px; }
 <!-- ============ HERO ============ -->
 <section class="hero">
 
-  <!-- Background hero con taglio diagonale obliquo (desktop) / banner orizzontale (mobile) -->
+  <!-- Background hero: video autoplay muted non controllabile, fallback poster -->
   <div class="hero-bg-video" id="heroVideo">
-    <img src="assets/hero-pergolato.jpg" alt="Il pergolato de L'Aretta con vista sulle colline della Sabina" loading="eager" fetchpriority="high">
-    <p class="hero-video-caption">«L'aria della Sabina, prima ancora del primo piatto.»</p>
+    <video
+      autoplay muted loop playsinline preload="auto"
+      disablepictureinpicture disableremoteplayback
+      poster="assets/hero-video-poster.jpg"
+      aria-hidden="true" tabindex="-1">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <p class="hero-video-caption">«L'aria di Roccantica, prima ancora del primo piatto.»</p>
   </div>
 
   <div class="container hero-grid">
@@ -1077,11 +1087,11 @@ body { padding-bottom: 80px; }
         Festa della Repubblica · Roccantica
       </div>
       <h1 class="serif">
-        Una domenica <span class="italic">lunga</span><br>
+        Una festa <span class="italic">lunga</span><br>
         in campagna.
       </h1>
       <p class="hero-sub">
-        Il 2 giugno apriamo le porte de L'Aretta per un pranzo della tradizione sabina.
+        Il 2 giugno apriamo le porte de L'Aretta per il pranzo della Festa della Repubblica.
         Quattro portate, vino della casa, e tutto il tempo che vuoi per restare tra gli ulivi.
       </p>
 
@@ -1152,7 +1162,7 @@ body { padding-bottom: 80px; }
         </div>
         <div class="step-time">12:30 — 13:15</div>
         <h3 class="step-title">L'arrivo, sotto il pergolato</h3>
-        <p class="step-body">Accoglienza in giardino con un calice di bollicine della casa e i nostri assaggi: olive nere di Roccantica, taralli, pecorino sabino.</p>
+        <p class="step-body">Accoglienza in giardino con un calice di bollicine della casa e i nostri assaggi: olive, taralli e pecorino locale.</p>
       </div>
 
       <div class="step-card reveal">
@@ -1162,7 +1172,7 @@ body { padding-bottom: 80px; }
         </div>
         <div class="step-time">13:15 — 16:00</div>
         <h3 class="step-title">Il pranzo della Repubblica</h3>
-        <p class="step-body">Quattro portate servite con calma. Un menù che racconta la Sabina: ingredienti del giorno, ricette di casa, il pane fatto in forno qui dietro.</p>
+        <p class="step-body">Quattro portate servite con calma. Un menù che racconta il territorio: ingredienti del giorno, ricette di casa, pane fatto qui dietro.</p>
       </div>
 
       <div class="step-card reveal">
@@ -1199,32 +1209,32 @@ body { padding-bottom: 80px; }
       <div class="menu-list">
         <div class="menu-row">
           <div class="course">Aperitivo di benvenuto</div>
-          <h4 class="dish">Bollicine della Sabina, olive nere, taralli al finocchio, pecorino del Terminillo</h4>
-          <p class="dish-note">— servito in giardino, sotto il pergolato</p>
+          <h4 class="dish">Un calice, gli assaggi della casa, l'attesa sotto il pergolato</h4>
+          <p class="dish-note">— bollicine, olive, taralli, pecorino locale</p>
         </div>
 
         <div class="menu-row">
           <div class="course">Antipasti</div>
-          <h4 class="dish">Trio della Sabina</h4>
-          <p class="dish-note">Bruschetta con olio nuovo · Frittata con cicoria di campo · Coratella d'agnello con carciofi</p>
+          <h4 class="dish">Una selezione dalla nostra cucina</h4>
+          <p class="dish-note">Ingredienti del giorno, ricette di casa, qualcosa di sfizioso da dividere</p>
         </div>
 
         <div class="menu-row">
           <div class="course">Primo</div>
-          <h4 class="dish">Strengozzi al sugo d'oca <em class="italic serif" style="color:var(--ink-soft); font-size:.85em;">— o gnocchi al pomodoro fresco per i bambini</em></h4>
-          <p class="dish-note">Pasta fresca tirata a mano la mattina stessa</p>
+          <h4 class="dish">Pasta fresca tirata a mano stamattina</h4>
+          <p class="dish-note">Per i più piccoli, una versione semplice al pomodoro</p>
         </div>
 
         <div class="menu-row">
           <div class="course">Secondo</div>
-          <h4 class="dish">Abbacchio al forno con patate, rosmarino e olio nuovo</h4>
-          <p class="dish-note">Servito con misticanza dell'orto e pane di Lariano</p>
+          <h4 class="dish">Il piatto forte della casa, con contorno dell'orto</h4>
+          <p class="dish-note">Cucinato lentamente, accompagnato dal nostro pane caldo</p>
         </div>
 
         <div class="menu-row">
           <div class="course">Dolce</div>
-          <h4 class="dish">Crostata di visciole della casa con gelato al fior di latte</h4>
-          <p class="dish-note">Pasta frolla di nonna Aretta, visciole della collina dietro</p>
+          <h4 class="dish">Dolce della casa, fatto da noi</h4>
+          <p class="dish-note">Pasta frolla, frutta di stagione, una coccola di fine pasto</p>
         </div>
       </div>
 
@@ -1259,12 +1269,12 @@ body { padding-bottom: 80px; }
     </div>
 
     <div class="gallery">
-      <div class="gallery-tile g-1"><img src="assets/gallery-01.jpg" alt="Tavolo apparecchiato sotto il pergolato" loading="lazy"></div>
-      <div class="gallery-tile g-2"><img src="assets/gallery-02.jpg" alt="Pergolato e giardino" loading="lazy"></div>
-      <div class="gallery-tile g-3"><img src="assets/gallery-08.jpg" alt="Dettaglio del pergolato verticale" loading="lazy"></div>
-      <div class="gallery-tile g-4"><img src="assets/gallery-03.jpg" alt="Vista sala da pranzo" loading="lazy"></div>
-      <div class="gallery-tile g-5"><img src="assets/gallery-04.jpg" alt="Vista sui colli della Sabina dal pergolato" loading="lazy"></div>
-      <div class="gallery-tile g-6"><img src="assets/gallery-05.jpg" alt="Tavolo in pietra all'ombra del pergolato" loading="lazy"></div>
+      <div class="gallery-tile g-1"><img src="assets/new-04.jpg" alt="L'Aretta vista panoramica" loading="lazy"></div>
+      <div class="gallery-tile g-2"><img src="assets/new-01.jpg" alt="Tavolo apparecchiato L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-3"><img src="assets/new-05-vert.jpg" alt="Dettaglio verticale L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-4"><img src="assets/new-02.jpg" alt="Atmosfera L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-5"><img src="assets/new-03.jpg" alt="Dettaglio cucina L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-6"><img src="assets/gallery-04.jpg" alt="Vista sui colli dal pergolato" loading="lazy"></div>
       <div class="gallery-tile g-7"><img src="assets/gallery-06.jpg" alt="Pergolato e collina" loading="lazy"></div>
     </div>
   </div>
@@ -1284,7 +1294,7 @@ body { padding-bottom: 80px; }
         <div class="address-block">
           <div class="label">L'indirizzo</div>
           <p class="addr serif">L'Aretta Ristorante</p>
-          <p class="city">Roccantica (RI) — Sabina, Lazio</p>
+          <p class="city">Via Marta Robbio Tacci · 02040 Roccantica (RI)</p>
         </div>
 
         <ul class="travel-list">
@@ -1312,12 +1322,8 @@ body { padding-bottom: 80px; }
         </ul>
 
         <div class="dove-actions" style="margin-top: 28px;">
-          <a href="https://www.google.com/maps/search/L'Aretta+Roccantica" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          <a href="https://www.google.com/maps/place/L'Aretta/@42.3236,12.7158,17z" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
             Apri in Google Maps
-            <span class="btn-arrow">↗</span>
-          </a>
-          <a href="https://maps.apple.com/?q=Roccantica" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-            Apple Maps
             <span class="btn-arrow">↗</span>
           </a>
         </div>
@@ -1334,7 +1340,7 @@ body { padding-bottom: 80px; }
 </section>
 
 <!-- ============ FORM ============ -->
-<section class="section book" id="prenota">
+<section class="section book">
   <div class="container">
     <div class="section-head reveal">
       <div class="section-eyebrow">Prenotazione</div>
@@ -1345,7 +1351,7 @@ body { padding-bottom: 80px; }
     <div class="book-grid">
       <div class="urgency-card reveal">
         <h4>Posti limitati, davvero.</h4>
-        <p>Per la Festa della Repubblica apriamo sala, giardino e pergolato — 250 coperti in totale. Ogni anno chiudiamo le prenotazioni una decina di giorni prima dell'evento. Meglio non rimandare.</p>
+        <p>Per la Festa della Repubblica apriamo sala, giardino e pergolato — 250 coperti in totale.</p>
 
         <div class="urgency-bar"><div class="urgency-bar-fill" id="urgency-fill"></div></div>
         <div class="urgency-bar-label">
@@ -1365,7 +1371,7 @@ body { padding-bottom: 80px; }
         </div>
       </div>
 
-      <form class="form reveal" id="bookingForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+      <form class="form reveal" id="prenota" action="https://script.google.com/macros/s/REPLACE_WITH_APPS_SCRIPT_URL/exec" method="POST">
         <h3 class="form-title">Prenota il tuo tavolo</h3>
         <p class="form-sub">2 giugno 2026 · dalle 12:30 · €30 a persona</p>
 
@@ -1541,26 +1547,22 @@ body { padding-bottom: 80px; }
   <a href="#prenota" class="btn btn-primary">Prenota →</a>
 </div>
 
-<!-- ============ SUCCESS MODAL ============ -->
-<div class="modal-bg" id="successModal">
-  <div class="modal">
-    <div class="check">✓</div>
-    <h3 class="serif">Grazie, ci siamo.</h3>
-    <p>La tua richiesta di prenotazione è stata inviata. Stiamo già preparando il tuo tavolo.</p>
-    <div class="next-steps">
-      <strong>Cosa succede ora</strong>
-      <ul>
-        <li>Riceverai una <strong>email di conferma</strong> entro 24 ore.</li>
-        <li>Ti scriveremo anche su <strong>WhatsApp</strong> per confermare i dettagli.</li>
-        <li>Il giorno dell'evento, arriva dalle <strong>12:30 in poi</strong>.</li>
-      </ul>
-    </div>
-    <button class="btn btn-primary" onclick="closeModal()" style="padding: 14px 28px;">Perfetto, ci vediamo</button>
-  </div>
-</div>
+<!-- Modal di successo rimosso: ora il submit redireziona a thank-you.html -->
 
 <!-- ============ SCRIPT ============ -->
 <script>
+// ============ HERO VIDEO GUARD (impedisce stop utente) ============
+(function () {
+  const v = document.querySelector('.hero-bg-video video');
+  if (!v) return;
+  const replay = () => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(()=>{}); };
+  v.addEventListener('pause', () => setTimeout(replay, 50));
+  v.addEventListener('ended', replay);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) replay(); });
+  // primo avvio in caso autoplay sia stato bloccato
+  setTimeout(replay, 100);
+})();
+
 // ============ COUNTDOWN ============
 (function () {
   const target = new Date('2026-06-02T12:30:00+02:00').getTime();
@@ -1607,47 +1609,44 @@ function closeModal() {
   document.getElementById('successModal').classList.remove('show');
 }
 
-// ============ FORM SUBMIT ============
+// ============ FORM SUBMIT — redirect a thank-you.html ============
 (function () {
-  const form = document.getElementById('bookingForm');
+  const form = document.getElementById('prenota');
   const submitText = document.getElementById('submit-text');
+  if (!form) return;
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
     submitText.textContent = 'Invio in corso...';
 
-    const formData = new FormData(form);
+    const fd = new FormData(form);
+    const action = form.action;
+    const params = new URLSearchParams({
+      nome: fd.get('nome') || '',
+      persone: fd.get('persone') || ''
+    });
 
-    try {
-      // Se l'endpoint è ancora placeholder, mostra modale di successo fittizio per la demo
-      const action = form.action;
-      if (action.includes('YOUR_FORMSPREE_ENDPOINT')) {
-        await new Promise(r => setTimeout(r, 800));
-        document.getElementById('successModal').classList.add('show');
-        form.reset();
-        document.getElementById('persone').value = 2;
-        submitText.textContent = 'Conferma la prenotazione';
-        return;
-      }
-
-      const res = await fetch(action, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' }
-      });
-
-      if (res.ok) {
-        document.getElementById('successModal').classList.add('show');
-        form.reset();
-        document.getElementById('persone').value = 2;
-      } else {
-        alert('Qualcosa è andato storto. Riprova o scrivici su WhatsApp.');
-      }
-    } catch (err) {
-      alert('Errore di rete. Riprova o scrivici su WhatsApp.');
+    // Se endpoint ancora placeholder, simula successo (utile per anteprima)
+    if (action.includes('REPLACE_WITH_APPS_SCRIPT_URL')) {
+      console.warn('Form action è ancora un placeholder. Sostituiscilo con l\'URL del tuo Apps Script.');
+      await new Promise(r => setTimeout(r, 600));
+      window.location.href = 'thank-you.html?' + params.toString();
+      return;
     }
 
-    submitText.textContent = 'Conferma la prenotazione';
+    try {
+      // Apps Script accetta POST, ritorna JSON. mode no-cors evita preflight ma blocca lettura risposta —
+      // accettiamolo: se la fetch non esplode, consideriamo l'invio andato a buon fine.
+      await fetch(action, {
+        method: 'POST',
+        body: fd,
+        mode: 'no-cors'
+      });
+      window.location.href = 'thank-you.html?' + params.toString();
+    } catch (err) {
+      submitText.textContent = 'Conferma la prenotazione';
+      alert('Errore di rete. Riprova fra qualche istante o scrivici su WhatsApp.');
+    }
   });
 })();
 

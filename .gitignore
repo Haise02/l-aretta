@@ -20,3 +20,8 @@ preventivi.skill
 
 # Duplicato di test scaricato durante lo sviluppo
 assets/test-*.jpg
+
+# Sorgenti grossi non ottimizzati (gia' presenti come versione web in /assets/)
+img landing/
+*.RAW
+*.ARW
