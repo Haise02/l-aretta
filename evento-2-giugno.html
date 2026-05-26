@@ -158,6 +158,33 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   min-height: 560px;
 }
+@media (max-width: 880px) {
+  .hero { min-height: 0; padding: 48px 0 0; }
+}
+
+/* ============ DOPPIO LIVELLO DI LETTURA ============ */
+/* Highlight terra per dati chiave (date, prezzi, numeri) */
+.hl {
+  color: var(--terra);
+  font-weight: 700;
+}
+/* Strong leggermente piu' marcato + caratteri ink scuri */
+strong, b {
+  font-weight: 700;
+  color: var(--ink);
+}
+.book strong, .footer strong {
+  color: var(--paper);
+}
+.book .hl, .footer .hl {
+  color: var(--gold);
+}
+.book .kw, .footer .kw { color: var(--paper); }
+/* Sub-bold neutro che mette in risalto senza colore */
+.kw {
+  font-weight: 600;
+  color: var(--ink);
+}
 .hero-grid {
   display: grid; gap: 24px;
   grid-template-columns: 1fr;
@@ -211,6 +238,42 @@ a { color: inherit; text-decoration: none; }
   font-size: 14px; font-weight: 500;
 }
 .meta-pill svg { width: 16px; height: 16px; }
+.meta-pill .mp-short { display: none; }
+.meta-pill .mp-full { display: inline; }
+
+/* Mobile: pill in modalita' "etichetta", trasparenti, tutte in riga */
+@media (max-width: 720px) {
+  .hero-meta {
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .meta-pill {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding: 8px 6px;
+    background: transparent;
+    border: 1px solid rgba(27, 22, 17, .12);
+    color: var(--ink-soft);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    opacity: 0.75;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .meta-pill svg {
+    width: 13px; height: 13px;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .meta-pill .mp-full { display: none; }
+  .meta-pill .mp-short { display: inline; }
+}
 
 .hero-cta-group {
   display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
@@ -1068,18 +1131,6 @@ body { padding-bottom: 80px; }
 <!-- ============ HERO ============ -->
 <section class="hero">
 
-  <!-- Background hero: video autoplay muted non controllabile, fallback poster -->
-  <div class="hero-bg-video" id="heroVideo">
-    <video
-      autoplay muted loop playsinline preload="auto"
-      disablepictureinpicture disableremoteplayback
-      poster="assets/hero-video-poster.jpg"
-      aria-hidden="true" tabindex="-1">
-      <source src="assets/hero-video.mp4" type="video/mp4">
-    </video>
-    <p class="hero-video-caption">«L'aria di Roccantica, prima ancora del primo piatto.»</p>
-  </div>
-
   <div class="container hero-grid">
     <div class="hero-content">
       <div class="eyebrow">
@@ -1091,22 +1142,25 @@ body { padding-bottom: 80px; }
         in campagna.
       </h1>
       <p class="hero-sub">
-        Il 2 giugno apriamo le porte de L'Aretta per il pranzo della Festa della Repubblica.
-        Quattro portate, vino della casa, e tutto il tempo che vuoi per restare tra gli ulivi.
+        Il <span class="hl">2 giugno</span> apriamo le porte de L'Aretta per il pranzo della <strong>Festa della Repubblica</strong>.
+        <strong>Quattro portate</strong>, <strong>vino della casa</strong>, e tutto il tempo che vuoi per restare tra gli ulivi.
       </p>
 
       <div class="hero-meta">
         <span class="meta-pill">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Martedì 2 giugno 2026
+          <span class="mp-full">Martedì 2 giugno 2026</span>
+          <span class="mp-short">2 giugno</span>
         </span>
         <span class="meta-pill">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          Dalle 12:30 in poi
+          <span class="mp-full">Dalle 12:30 in poi</span>
+          <span class="mp-short">Dalle 12:30</span>
         </span>
         <span class="meta-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg>
-          €30 a persona
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7.5a8 8 0 100 9"/><path d="M3 10.5h10M3 13.5h10"/></svg>
+          <span class="mp-full">€30 a persona</span>
+          <span class="mp-short">€30</span>
         </span>
       </div>
 
@@ -1142,6 +1196,18 @@ body { padding-bottom: 80px; }
       </div>
     </div>
   </div>
+
+  <!-- Video di background: su desktop sta a destra (absolute), su mobile sotto al testo (relative) -->
+  <div class="hero-bg-video" id="heroVideo">
+    <video
+      autoplay muted loop playsinline preload="auto"
+      disablepictureinpicture disableremoteplayback
+      poster="assets/hero-video-poster.jpg"
+      aria-hidden="true" tabindex="-1">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <p class="hero-video-caption">«L'aria di Roccantica, prima ancora del primo piatto.»</p>
+  </div>
 </section>
 
 
@@ -1151,7 +1217,7 @@ body { padding-bottom: 80px; }
     <div class="section-head reveal">
       <div class="section-eyebrow">Come va la giornata</div>
       <h2 class="section-title">Un pranzo che <span class="italic serif">dura quanto vuoi.</span></h2>
-      <p class="section-lead">Si entra dalle 12:30, si esce quando torna la frescura. Niente turni, niente fretta. Solo il tempo di una domenica fatta come una volta.</p>
+      <p class="section-lead">Si entra <span class="hl">dalle 12:30</span>, si esce quando torna la frescura. <strong>Niente turni, niente fretta.</strong> Solo il tempo di una giornata fatta come una volta.</p>
     </div>
 
     <div class="giornata-grid">
@@ -1162,7 +1228,7 @@ body { padding-bottom: 80px; }
         </div>
         <div class="step-time">12:30 — 13:15</div>
         <h3 class="step-title">L'arrivo, sotto il pergolato</h3>
-        <p class="step-body">Accoglienza in giardino con un calice di bollicine della casa e i nostri assaggi: olive, taralli e pecorino locale.</p>
+        <p class="step-body">Accoglienza in giardino con un <strong>calice di bollicine</strong> della casa e gli assaggi del territorio: olive, taralli e pecorino locale.</p>
       </div>
 
       <div class="step-card reveal">
@@ -1172,7 +1238,7 @@ body { padding-bottom: 80px; }
         </div>
         <div class="step-time">13:15 — 16:00</div>
         <h3 class="step-title">Il pranzo della Repubblica</h3>
-        <p class="step-body">Quattro portate servite con calma. Un menù che racconta il territorio: ingredienti del giorno, ricette di casa, pane fatto qui dietro.</p>
+        <p class="step-body"><strong>Quattro portate</strong> servite con calma. Un menù che racconta il territorio: <strong>ingredienti del giorno</strong>, ricette di casa, pane fatto qui dietro.</p>
       </div>
 
       <div class="step-card reveal">
@@ -1182,7 +1248,7 @@ body { padding-bottom: 80px; }
         </div>
         <div class="step-time">Fino al tramonto</div>
         <h3 class="step-title">Si resta. Punto.</h3>
-        <p class="step-body">Caffè, ammazzacaffè, una camminata tra gli ulivi se ti va. I bambini giocano in giardino, gli adulti raccontano. Si va via quando si vuole.</p>
+        <p class="step-body">Caffè, ammazzacaffè, una <strong>camminata tra gli ulivi</strong> se ti va. I bambini giocano in giardino, gli adulti raccontano. <strong>Si va via quando si vuole.</strong></p>
       </div>
     </div>
   </div>
@@ -1194,7 +1260,7 @@ body { padding-bottom: 80px; }
     <div class="section-head reveal">
       <div class="section-eyebrow">Il menù del giorno</div>
       <h2 class="section-title">Quattro portate, <span class="italic serif">tutto incluso.</span></h2>
-      <p class="section-lead">Un menù fisso, pensato per restare a tavola con calma. Il piatto cambia con la stagione e con quello che troviamo in mattinata al mercato di Poggio Mirteto.</p>
+      <p class="section-lead">Un <strong>menù fisso</strong>, pensato per restare a tavola con calma. Il piatto cambia con la stagione e con quello che troviamo in mattinata al <strong>mercato di Poggio Mirteto</strong>.</p>
     </div>
 
     <div class="menu-card reveal">
@@ -1210,7 +1276,7 @@ body { padding-bottom: 80px; }
         <div class="menu-row">
           <div class="course">Aperitivo di benvenuto</div>
           <h4 class="dish">Un calice, gli assaggi della casa, l'attesa sotto il pergolato</h4>
-          <p class="dish-note">— bollicine, olive, taralli, pecorino locale</p>
+          <p class="dish-note">— <strong>bollicine</strong>, olive, taralli, <strong>pecorino locale</strong></p>
         </div>
 
         <div class="menu-row">
@@ -1221,8 +1287,8 @@ body { padding-bottom: 80px; }
 
         <div class="menu-row">
           <div class="course">Primo</div>
-          <h4 class="dish">Pasta fresca tirata a mano stamattina</h4>
-          <p class="dish-note">Per i più piccoli, una versione semplice al pomodoro</p>
+          <h4 class="dish">Pasta fresca tirata a mano <strong>stamattina</strong></h4>
+          <p class="dish-note">Per i più piccoli, una versione semplice <strong>al pomodoro</strong></p>
         </div>
 
         <div class="menu-row">
@@ -1246,7 +1312,7 @@ body { padding-bottom: 80px; }
       </div>
 
       <div class="menu-veg-note">
-        <strong>Vegetariani, intolleranze, bambini:</strong> abbiamo opzioni per tutti. Indicale nel campo "Note" della prenotazione e ci pensiamo noi.
+        <strong>Vegetariani, intolleranze, bambini:</strong> abbiamo opzioni per tutti. Indicale nel campo <span class="kw">"Note"</span> della prenotazione e ci pensiamo noi.
       </div>
 
       <div style="text-align:center; margin-top:36px;">
@@ -1265,7 +1331,7 @@ body { padding-bottom: 80px; }
     <div class="section-head reveal">
       <div class="section-eyebrow">Uno sguardo</div>
       <h2 class="section-title">L'Aretta, <span class="italic serif">in qualche foto.</span></h2>
-      <p class="section-lead">La sala, il giardino, gli ulivi, la cucina. Tutto quello che troverai il 2 giugno.</p>
+      <p class="section-lead">Il giardino, gli ulivi, il pergolato, la cucina. Tutto quello che troverai il 2 giugno.</p>
     </div>
 
     <div class="gallery">
@@ -1286,7 +1352,7 @@ body { padding-bottom: 80px; }
     <div class="section-head reveal">
       <div class="section-eyebrow">Come arrivare</div>
       <h2 class="section-title">A <span class="italic serif">cinquanta minuti</span> da Roma.</h2>
-      <p class="section-lead">Roccantica è un borgo della Sabina, su una collina d'ulivi. Da Roma sono 50 minuti in auto. La strada vale già il viaggio.</p>
+      <p class="section-lead">Roccantica è un borgo della <strong>Sabina</strong>, su una collina d'ulivi. Da Roma sono <span class="hl">50 minuti</span> in auto. La strada vale già il viaggio.</p>
     </div>
 
     <div class="dove-grid">
@@ -1302,21 +1368,21 @@ body { padding-bottom: 80px; }
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h11l4 5h2v6h-2"/></svg></div>
             <div>
               <strong>In auto da Roma</strong>
-              <span class="muted">A1 → uscita Ponzano Romano → SS313 verso Rieti, ~50 minuti.<br>Parcheggio gratuito al ristorante.</span>
+              <span class="muted">A1 → uscita <span class="kw">Ponzano Romano</span> → SS313 verso Rieti, ~<span class="kw">50 minuti</span>.<br><strong>Parcheggio gratuito</strong> al ristorante.</span>
             </div>
           </li>
           <li>
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 19v2M15 19v2"/></svg></div>
             <div>
               <strong>In treno</strong>
-              <span class="muted">Stazione di Poggio Mirteto Scalo (FL1), poi 15 minuti in taxi o navetta su richiesta.</span>
+              <span class="muted">Stazione di <span class="kw">Poggio Mirteto Scalo</span> (FL1), poi <span class="kw">15 minuti</span> in taxi o navetta su richiesta.</span>
             </div>
           </li>
           <li>
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
               <strong>Coordinate GPS</strong>
-              <span class="muted">42.3236° N, 12.7158° E — segui le indicazioni per "Centro storico Roccantica".</span>
+              <span class="muted"><span class="kw">42.3236° N, 12.7158° E</span> — segui le indicazioni per "Centro storico Roccantica".</span>
             </div>
           </li>
         </ul>
@@ -1345,13 +1411,13 @@ body { padding-bottom: 80px; }
     <div class="section-head reveal">
       <div class="section-eyebrow">Prenotazione</div>
       <h2 class="section-title">Prenota <span class="italic serif">il tuo tavolo.</span></h2>
-      <p class="section-lead">Compila il form: ti rispondiamo entro 24 ore con la conferma del tavolo via email e un messaggio su WhatsApp.</p>
+      <p class="section-lead">Compila il form: ti rispondiamo <strong>entro 24 ore</strong> con la conferma del tavolo via <strong>email</strong> e un messaggio su <strong>WhatsApp</strong>.</p>
     </div>
 
     <div class="book-grid">
       <div class="urgency-card reveal">
         <h4>Posti limitati, davvero.</h4>
-        <p>Per la Festa della Repubblica apriamo sala, giardino e pergolato — 250 coperti in totale.</p>
+        <p>Per la <strong>Festa della Repubblica</strong> apriamo tutto il giardino e il pergolato — <span class="hl">250 coperti</span> in totale.</p>
 
         <div class="urgency-bar"><div class="urgency-bar-fill" id="urgency-fill"></div></div>
         <div class="urgency-bar-label">
@@ -1373,7 +1439,7 @@ body { padding-bottom: 80px; }
 
       <form class="form reveal" id="prenota" action="https://script.google.com/macros/s/REPLACE_WITH_APPS_SCRIPT_URL/exec" method="POST">
         <h3 class="form-title">Prenota il tuo tavolo</h3>
-        <p class="form-sub">2 giugno 2026 · dalle 12:30 · €30 a persona</p>
+        <p class="form-sub"><span class="hl">2 giugno 2026</span> · <span class="kw">dalle 12:30</span> · <span class="hl">€30 a persona</span></p>
 
         <!-- hidden fields for Formspree -->
         <input type="hidden" name="_subject" value="Nuova prenotazione · 2 giugno 2026">
@@ -1423,9 +1489,9 @@ body { padding-bottom: 80px; }
         </div>
 
         <div class="form-foot">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> Risposta entro 24 ore</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> Conferma via email + WhatsApp</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> Pagamento direttamente al ristorante</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span>Risposta <strong>entro 24 ore</strong></span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span>Conferma via <strong>email + WhatsApp</strong></span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span>Pagamento <strong>direttamente al ristorante</strong></span></div>
         </div>
       </form>
     </div>
@@ -1447,7 +1513,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>Certo. Basta avvisarci almeno 48 ore prima dell'evento, scrivendoci su WhatsApp o via email. Niente penali, capita.</p>
+          <p>Certo. Basta avvisarci <strong>almeno 48 ore prima</strong> dell'evento, scrivendoci su <strong>WhatsApp</strong> o via <strong>email</strong>. <strong>Niente penali</strong>, capita.</p>
         </div>
       </div>
 
@@ -1457,7 +1523,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>I bambini sotto i 10 anni hanno un menù dedicato (pasta al pomodoro, scaloppina, gelato) a €15. Sopra i 10 anni il menù è quello degli adulti a €30.</p>
+          <p>I <strong>bambini sotto i 10 anni</strong> hanno un menù dedicato (pasta al pomodoro, scaloppina, gelato) a <span class="hl">€15</span>. Sopra i 10 anni il menù è quello degli adulti a <span class="hl">€30</span>.</p>
         </div>
       </div>
 
@@ -1467,7 +1533,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>Sì, sempre. Indica le tue esigenze nel campo "Note" della prenotazione: glutine, lattosio, vegetariano, vegano. Ricostruiamo il menù attorno a te.</p>
+          <p>Sì, sempre. Indica le tue esigenze nel campo <span class="kw">"Note"</span> della prenotazione: <strong>glutine, lattosio, vegetariano, vegano</strong>. Ricostruiamo il menù attorno a te.</p>
         </div>
       </div>
 
@@ -1477,7 +1543,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>No, il pagamento è direttamente al ristorante alla fine del pranzo. Accettiamo contante, carte e bancomat. La prenotazione si conferma solo con la tua mail di conferma — gratuita.</p>
+          <p>No, il pagamento è <strong>direttamente al ristorante</strong> alla fine del pranzo. Accettiamo <strong>contante, carte e bancomat</strong>. La prenotazione si conferma solo con la tua mail di conferma — <strong>gratuita</strong>.</p>
         </div>
       </div>
 
@@ -1487,7 +1553,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>No, nessun turno. Si entra dalle 12:30 e si esce quando si vuole. La media è 3-4 ore, ma c'è chi resta fino a sera in giardino.</p>
+          <p><strong>No, nessun turno.</strong> Si entra <span class="hl">dalle 12:30</span> e si esce quando si vuole. La media è <strong>3-4 ore</strong>, ma c'è chi resta fino a sera in giardino.</p>
         </div>
       </div>
 
@@ -1497,7 +1563,7 @@ body { padding-bottom: 80px; }
           <span class="plus">+</span>
         </button>
         <div class="faq-a">
-          <p>Assolutamente sì. Abbiamo tavoli da 2 e da 1, sotto il pergolato o in sala. Specifica nelle note se preferisci un posto tranquillo o vicino al giardino.</p>
+          <p><strong>Assolutamente sì.</strong> Abbiamo <strong>tavoli da 2 e da 1</strong>, sotto il pergolato o in giardino. Specifica nelle note se preferisci un posto più tranquillo o più centrale.</p>
         </div>
       </div>
     </div>
