@@ -285,6 +285,7 @@ strong, b {
 }
 .trust-dots {
   display: flex;
+  flex-shrink: 0;
 }
 .trust-dots span {
   width: 28px; height: 28px; border-radius: 50%;
@@ -294,6 +295,29 @@ strong, b {
 .trust-dots span:nth-child(2) { background: linear-gradient(135deg, var(--gold), var(--terra)); }
 .trust-dots span:nth-child(3) { background: linear-gradient(135deg, var(--terra), var(--terra-deep)); }
 .trust-dots span:nth-child(4) { background: linear-gradient(135deg, var(--olive), #3b4a1c); }
+
+/* Rating block sotto countdown */
+.rating {
+  display: flex; flex-direction: column; gap: 4px;
+  line-height: 1.25;
+}
+.rating-row {
+  display: flex; align-items: center; gap: 8px;
+}
+.stars {
+  display: inline-flex; gap: 2px;
+  color: var(--gold);
+}
+.stars svg { width: 16px; height: 16px; }
+.rating-score {
+  font-family: 'Fraunces', serif; font-weight: 600;
+  font-size: 17px; color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.rating-count {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
 
 /* Hero diagonal video background */
 .hero-bg-video {
@@ -1143,7 +1167,7 @@ body { padding-bottom: 80px; }
       </h1>
       <p class="hero-sub">
         Il <span class="hl">2 giugno</span> apriamo le porte de L'Aretta per il pranzo della <strong>Festa della Repubblica</strong>.
-        <strong>Quattro portate</strong>, <strong>vino della casa</strong>, e tutto il tempo che vuoi per restare tra gli ulivi.
+        <strong>Tre portate</strong>, <strong>mezzo litro di vino</strong> e caffè inclusi, e tutto il tempo che vuoi per restare tra gli ulivi.
       </p>
 
       <div class="hero-meta">
@@ -1192,7 +1216,19 @@ body { padding-bottom: 80px; }
         <div class="trust-dots">
           <span></span><span></span><span></span><span></span>
         </div>
-        <div>Sale piccole, atmosfera di famiglia.<br><span style="opacity:.6">Ogni anno, sempre tutto esaurito.</span></div>
+        <div class="rating">
+          <div class="rating-row">
+            <span class="stars" aria-label="4.7 stelle su 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+            </span>
+            <span class="rating-score">4.7</span>
+          </div>
+          <span class="rating-count">su 5 · oltre 200 recensioni Google</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1224,31 +1260,21 @@ body { padding-bottom: 80px; }
       <div class="step-card reveal">
         <div class="step-num serif">01</div>
         <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M5 3h14l-1 12a2 2 0 01-2 2H8a2 2 0 01-2-2L5 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11h18M5 11V7a7 7 0 0114 0v4M7 21h10l1-6H6l1 6z"/></svg>
         </div>
-        <div class="step-time">12:30 — 13:15</div>
-        <h3 class="step-title">L'arrivo, sotto il pergolato</h3>
-        <p class="step-body">Accoglienza in giardino con un <strong>calice di bollicine</strong> della casa e gli assaggi del territorio: olive, taralli e pecorino locale.</p>
+        <div class="step-time">Dalle 12:30</div>
+        <h3 class="step-title">Il pranzo della Repubblica</h3>
+        <p class="step-body"><strong>Tre portate</strong> servite con calma, sotto il pergolato. <strong>Ingredienti del giorno</strong>, ricette di casa, pane fatto qui dietro.</p>
       </div>
 
       <div class="step-card reveal">
         <div class="step-num serif">02</div>
         <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11h18M5 11V7a7 7 0 0114 0v4M7 21h10l1-6H6l1 6z"/></svg>
-        </div>
-        <div class="step-time">13:15 — 16:00</div>
-        <h3 class="step-title">Il pranzo della Repubblica</h3>
-        <p class="step-body"><strong>Quattro portate</strong> servite con calma. Un menù che racconta il territorio: <strong>ingredienti del giorno</strong>, ricette di casa, pane fatto qui dietro.</p>
-      </div>
-
-      <div class="step-card reveal">
-        <div class="step-num serif">03</div>
-        <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg>
         </div>
         <div class="step-time">Fino al tramonto</div>
         <h3 class="step-title">Si resta. Punto.</h3>
-        <p class="step-body">Caffè, ammazzacaffè, una <strong>camminata tra gli ulivi</strong> se ti va. I bambini giocano in giardino, gli adulti raccontano. <strong>Si va via quando si vuole.</strong></p>
+        <p class="step-body">Caffè, una <strong>camminata tra gli ulivi</strong> se ti va. I bambini giocano in giardino, gli adulti raccontano. <strong>Si va via quando si vuole.</strong></p>
       </div>
     </div>
   </div>
@@ -1259,7 +1285,7 @@ body { padding-bottom: 80px; }
   <div class="container">
     <div class="section-head reveal">
       <div class="section-eyebrow">Il menù del giorno</div>
-      <h2 class="section-title">Quattro portate, <span class="italic serif">tutto incluso.</span></h2>
+      <h2 class="section-title">Tre portate, <span class="italic serif">tutto incluso.</span></h2>
       <p class="section-lead">Un <strong>menù fisso</strong>, pensato per restare a tavola con calma. Il piatto cambia con la stagione e con quello che troviamo in mattinata al <strong>mercato di Poggio Mirteto</strong>.</p>
     </div>
 
@@ -1274,41 +1300,29 @@ body { padding-bottom: 80px; }
 
       <div class="menu-list">
         <div class="menu-row">
-          <div class="course">Aperitivo di benvenuto</div>
-          <h4 class="dish">Un calice, gli assaggi della casa, l'attesa sotto il pergolato</h4>
-          <p class="dish-note">— <strong>bollicine</strong>, olive, taralli, <strong>pecorino locale</strong></p>
-        </div>
-
-        <div class="menu-row">
-          <div class="course">Antipasti</div>
-          <h4 class="dish">Una selezione dalla nostra cucina</h4>
-          <p class="dish-note">Ingredienti del giorno, ricette di casa, qualcosa di sfizioso da dividere</p>
+          <div class="course">Antipasto</div>
+          <h4 class="dish">Tagliere di <strong>salumi e formaggi locali</strong></h4>
+          <p class="dish-note">Prodotti del territorio, da dividere e gustare con calma</p>
         </div>
 
         <div class="menu-row">
           <div class="course">Primo</div>
-          <h4 class="dish">Pasta fresca tirata a mano <strong>stamattina</strong></h4>
-          <p class="dish-note">Per i più piccoli, una versione semplice <strong>al pomodoro</strong></p>
+          <h4 class="dish">Fettuccine al <strong>sugo di maiale</strong> con erbe spontanee</h4>
+          <p class="dish-note">Erbe raccolte da noi, pasta tirata a mano <strong>stamattina</strong></p>
         </div>
 
         <div class="menu-row">
           <div class="course">Secondo</div>
-          <h4 class="dish">Il piatto forte della casa, con contorno dell'orto</h4>
-          <p class="dish-note">Cucinato lentamente, accompagnato dal nostro pane caldo</p>
-        </div>
-
-        <div class="menu-row">
-          <div class="course">Dolce</div>
-          <h4 class="dish">Dolce della casa, fatto da noi</h4>
-          <p class="dish-note">Pasta frolla, frutta di stagione, una coccola di fine pasto</p>
+          <h4 class="dish"><strong>Grigliata mista</strong>: le nostre pecore e il nostro maiale</h4>
+          <p class="dish-note">Carni allevate da noi, cotte sulla brace, servite con pane caldo</p>
         </div>
       </div>
 
       <div class="menu-included">
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Vino della casa</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Acqua minerale</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>1/2 litro di vino</strong> a persona</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Acqua a volontà</div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Caffè</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ammazzacaffè</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Pane fatto in casa</div>
       </div>
 
       <div class="menu-veg-note">
