@@ -1,0 +1,1776 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F5EFE0" />
+<title>Domenica in campagna — L'Aretta · Roccantica</title>
+<meta name="description" content="Domenica in campagna a L'Aretta, Roccantica. Pranzo a menù fisso dalle 12:00, €35 a persona, vino e caffè inclusi. Posti limitati: prenota il tuo tavolo." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="L'Aretta — una domenica lunga in campagna" />
+<meta property="og:description" content="Pranzo della domenica in campagna, dalle 12:00. Menù fisso a €35, vino e caffè inclusi. Posti limitati. Roccantica (RI)." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="it_IT" />
+
+<!-- Schema.org Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEvent",
+  "name": "Domenica in campagna a L'Aretta",
+  "description": "Pranzo della domenica con menù fisso della tradizione locale, dalle 12:00 in poi.",
+  "startDate": "2026-06-14T12:00:00+02:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Restaurant",
+    "name": "L'Aretta",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Roccantica",
+      "addressRegion": "RI",
+      "addressCountry": "IT"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "35",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/LimitedAvailability"
+  },
+  "organizer": { "@type": "Restaurant", "name": "L'Aretta" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3370701009758846');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3370701009758846&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* ============ RESET & BASE ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+:root {
+  --cream: #F3EBD8;
+  --cream-2: #EADFC4;
+  --paper: #FAF6EC;
+  --ink: #1B1611;
+  --ink-soft: #4B3D2E;
+  --terra: #B8472F;
+  --terra-deep: #8B2F1F;
+  --olive: #5B6B2F;
+  --olive-soft: #8BA05B;
+  --gold: #C99A2E;
+  --shadow: 0 30px 60px -30px rgba(27, 22, 17, .25);
+  --radius: 22px;
+  --radius-sm: 12px;
+  --container: 1200px;
+}
+
+.serif { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; font-variation-settings: "SOFT" 30, "WONK" 0; }
+.italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* ============ TOP BAR ============ */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(243, 235, 216, .85);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid rgba(27, 22, 17, .08);
+}
+.topbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; gap: 16px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px;
+  letter-spacing: -0.01em;
+}
+.brand-mark {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--terra); position: relative; display: inline-block;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 7px; border-radius: 50%;
+  background: var(--cream);
+}
+.brand-mark::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 4px; height: 4px; background: var(--terra); border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.topbar-chip {
+  display: none; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 500; color: var(--ink-soft);
+  padding: 8px 14px; border-radius: 999px; background: var(--paper);
+  border: 1px solid rgba(27, 22, 17, .08);
+}
+.topbar-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--terra); animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: .5; }
+}
+@media (min-width: 720px) { .topbar-chip { display: inline-flex; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--terra); color: var(--paper);
+  box-shadow: 0 10px 24px -10px rgba(184, 71, 47, .6);
+}
+.btn-primary:hover { background: var(--terra-deep); transform: translateY(-2px); box-shadow: 0 18px 32px -10px rgba(184, 71, 47, .65); }
+.btn-ghost {
+  background: transparent; color: var(--ink);
+  border: 1.5px solid rgba(27, 22, 17, .15);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-arrow { transition: transform .25s ease; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+.btn-sm { padding: 10px 16px; font-size: 14px; }
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  padding: 60px 0 80px;
+  overflow: hidden;
+  min-height: 560px;
+}
+@media (max-width: 880px) {
+  .hero { min-height: 0; padding: 48px 0 0; }
+}
+
+/* ============ DOPPIO LIVELLO DI LETTURA ============ */
+/* Highlight terra per dati chiave (date, prezzi, numeri) */
+.hl {
+  color: var(--terra);
+  font-weight: 700;
+}
+/* Strong leggermente piu' marcato + caratteri ink scuri */
+strong, b {
+  font-weight: 700;
+  color: var(--ink);
+}
+.book strong, .footer strong {
+  color: var(--paper);
+}
+.book .hl, .footer .hl {
+  color: var(--gold);
+}
+.book .kw, .footer .kw { color: var(--paper); }
+/* Sub-bold neutro che mette in risalto senza colore */
+.kw {
+  font-weight: 600;
+  color: var(--ink);
+}
+.hero-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: 1fr;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-content { position: relative; z-index: 2; }
+@media (min-width: 980px) {
+  .hero { padding: 96px 0 120px; min-height: 720px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) 1fr; gap: 32px; }
+  .hero-content { max-width: 600px; }
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 24px;
+}
+.eyebrow-line {
+  width: 32px; height: 1.5px; background: var(--terra);
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(40px, 7vw, 84px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+.hero h1 .italic { color: var(--terra); font-weight: 400; }
+
+.hero-sub {
+  font-size: clamp(17px, 1.6vw, 20px);
+  color: var(--ink-soft);
+  margin: 0 0 32px;
+  max-width: 520px;
+}
+
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-bottom: 36px;
+}
+.meta-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--paper);
+  border: 1px solid rgba(27, 22, 17, .08);
+  font-size: 14px; font-weight: 500;
+}
+.meta-pill svg { width: 16px; height: 16px; }
+.meta-pill .mp-short { display: none; }
+.meta-pill .mp-full { display: inline; }
+
+/* Mobile: pill in modalita' "etichetta", trasparenti, tutte in riga */
+@media (max-width: 720px) {
+  .hero-meta {
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .meta-pill {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding: 8px 6px;
+    background: transparent;
+    border: 1px solid rgba(27, 22, 17, .12);
+    color: var(--ink-soft);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    opacity: 0.75;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .meta-pill svg {
+    width: 13px; height: 13px;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .meta-pill .mp-full { display: none; }
+  .meta-pill .mp-short { display: inline; }
+}
+
+.hero-cta-group {
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+}
+.hero-trust {
+  margin-top: 28px;
+  display: flex; align-items: center; gap: 16px;
+  font-size: 13px; color: var(--ink-soft);
+}
+.trust-dots {
+  display: flex;
+  flex-shrink: 0;
+}
+.trust-dots span {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 2px solid var(--cream); margin-left: -8px;
+  background: linear-gradient(135deg, var(--olive-soft), var(--olive));
+}
+.trust-dots span:nth-child(2) { background: linear-gradient(135deg, var(--gold), var(--terra)); }
+.trust-dots span:nth-child(3) { background: linear-gradient(135deg, var(--terra), var(--terra-deep)); }
+.trust-dots span:nth-child(4) { background: linear-gradient(135deg, var(--olive), #3b4a1c); }
+
+/* Rating block sotto countdown */
+.rating {
+  display: flex; flex-direction: column; gap: 4px;
+  line-height: 1.25;
+}
+.rating-row {
+  display: flex; align-items: center; gap: 8px;
+}
+.stars {
+  display: inline-flex; gap: 2px;
+  color: var(--gold);
+}
+.stars svg { width: 16px; height: 16px; }
+.rating-score {
+  font-family: 'Fraunces', serif; font-weight: 600;
+  font-size: 17px; color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.rating-count {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* Hero diagonal video background */
+.hero-bg-video {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 62vw;
+  /* Diagonale "/" — bordo sinistro inclinato dal 35% top allo 0% bottom */
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(27,22,17,.15) 0%, rgba(27,22,17,.55) 100%),
+    linear-gradient(135deg, rgba(184, 71, 47, .35) 0%, rgba(91, 107, 47, .55) 100%),
+    repeating-linear-gradient(45deg, #4f5e28 0 18px, #6b7a3a 18px 36px);
+}
+.hero-bg-video video,
+.hero-bg-video iframe,
+.hero-bg-video img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border: 0;
+  pointer-events: none; /* impedisce pause/play da click utente */
+  user-select: none;
+}
+.hero-bg-video video::-webkit-media-controls { display: none !important; }
+.hero-bg-video::before {
+  /* film grain overlay */
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(250,246,236,.06) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+.hero-bg-video::after {
+  /* soft fade verso il bordo sinistro per fondere con il cream */
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(243,235,216,.45) 0%, transparent 28%);
+  pointer-events: none;
+}
+
+.hero-video-play {
+  position: absolute;
+  right: 16%; top: 50%;
+  transform: translateY(-50%);
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: rgba(250, 246, 236, .95);
+  display: grid; place-items: center;
+  cursor: pointer;
+  box-shadow: 0 20px 60px -10px rgba(0,0,0,.4);
+  transition: transform .25s ease, background .25s ease;
+  z-index: 3;
+}
+.hero-video-play:hover { transform: translateY(-50%) scale(1.06); background: var(--paper); }
+.hero-video-play::after {
+  content: '';
+  width: 0; height: 0;
+  border-left: 22px solid var(--terra);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  margin-left: 6px;
+}
+.hero-video-play::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid rgba(250, 246, 236, .55);
+  animation: ringPulse 2.4s ease-out infinite;
+}
+@keyframes ringPulse {
+  0% { transform: scale(1); opacity: .8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.hero-video-tag {
+  position: absolute; right: 32px; top: 32px;
+  z-index: 3;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(27, 22, 17, .55);
+  backdrop-filter: blur(10px);
+  color: var(--paper);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.hero-video-tag .live-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--terra);
+  box-shadow: 0 0 0 4px rgba(184,71,47,.3);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+.hero-video-caption {
+  position: absolute; right: 32px; bottom: 32px;
+  max-width: 320px;
+  z-index: 3;
+  color: var(--paper);
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: 18px; line-height: 1.3;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+  text-align: right;
+}
+.hero-video-placeholder-note {
+  position: absolute;
+  right: 16%; top: calc(50% + 70px);
+  transform: translateX(50%);
+  z-index: 3;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(27, 22, 17, .75);
+  color: var(--paper);
+  font-family: 'Manrope', sans-serif; font-style: normal;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
+  white-space: nowrap;
+  border: 1px dashed rgba(250, 246, 236, .3);
+}
+
+/* Hero su mobile: video diventa banner orizzontale sotto il testo */
+@media (max-width: 880px) {
+  .hero-bg-video {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+    margin-top: 24px;
+    border-radius: 0;
+  }
+  .hero-bg-video::after {
+    background: linear-gradient(0deg, transparent 0%, rgba(243,235,216,.4) 100%);
+  }
+  .hero-video-play { right: 50%; transform: translate(50%, -50%); width: 76px; height: 76px; }
+  .hero-video-play:hover { transform: translate(50%, -50%) scale(1.06); }
+  .hero-video-play::after { border-left-width: 18px; border-top-width: 12px; border-bottom-width: 12px; }
+  .hero-video-tag { left: 16px; right: auto; top: 24px; }
+  .hero-video-caption { left: 16px; right: 16px; bottom: 16px; max-width: none; text-align: left; font-size: 15px; }
+  .hero-video-placeholder-note { right: 50%; top: auto; bottom: 64px; transform: translateX(50%); }
+}
+
+/* ============ MARQUEE (sotto topbar) ============ */
+.marquee {
+  border-bottom: 1px solid rgba(27, 22, 17, .08);
+  overflow: hidden;
+  background: var(--ink);
+  padding: 14px 0;
+  color: var(--paper);
+}
+.marquee-track {
+  display: flex; gap: 48px;
+  animation: marquee 32s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+.marquee-item {
+  font-family: 'Fraunces', serif; font-size: 16px; font-style: italic;
+  color: var(--paper);
+  display: inline-flex; align-items: center; gap: 48px;
+  letter-spacing: 0.005em;
+}
+.marquee-item::after {
+  content: '✻'; color: var(--gold); font-style: normal; font-size: 14px;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* ============ HERO COUNTDOWN (inline sotto CTA) ============ */
+.hero-countdown {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 14px;
+  margin-top: 28px;
+  padding: 12px 18px;
+  background: var(--paper);
+  border: 1px solid rgba(27, 22, 17, .1);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px -10px rgba(27,22,17,.2);
+}
+.hcd-label {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--terra); font-weight: 700;
+}
+.hcd-cells {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.hcd-cell { display: inline-flex; align-items: baseline; gap: 3px; }
+.hcd-num {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  font-size: 22px; line-height: 1; color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.hcd-lbl {
+  font-size: 11px; color: var(--ink-soft);
+  font-weight: 600; letter-spacing: 0.05em;
+}
+.hcd-sep { color: rgba(27,22,17,.25); font-size: 14px; }
+
+/* ============ SECTION HEADERS ============ */
+.section { padding: 80px 0; }
+@media (min-width: 720px) { .section { padding: 110px 0; } }
+
+.section-head {
+  max-width: 720px; margin: 0 auto 64px;
+  text-align: center;
+}
+.section-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 20px;
+}
+.section-eyebrow::before, .section-eyebrow::after {
+  content: ''; width: 24px; height: 1.5px; background: var(--terra);
+}
+.section-title {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.05; letter-spacing: -0.025em;
+  margin: 0 0 18px;
+}
+.section-title .italic { color: var(--terra); }
+.section-lead {
+  font-size: clamp(16px, 1.5vw, 19px); color: var(--ink-soft);
+  margin: 0 auto; max-width: 620px;
+}
+
+/* ============ EXPERIENCE / GIORNATA ============ */
+.giornata { background: var(--paper); position: relative; overflow: hidden; }
+.giornata::before {
+  content: ''; position: absolute; left: -120px; bottom: -120px;
+  width: 360px; height: 360px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 107, 47, .12) 0%, transparent 70%);
+}
+.giornata-grid {
+  display: grid; gap: 24px;
+  grid-template-columns: 1fr;
+  position: relative; z-index: 1;
+}
+@media (min-width: 880px) {
+  .giornata-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+}
+
+.step-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  position: relative;
+  border: 1px solid rgba(27, 22, 17, .06);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.step-num {
+  position: absolute; top: 24px; right: 28px;
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: 64px; color: var(--terra);
+  opacity: 0.18; line-height: 1;
+}
+.step-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--cream-2);
+  display: grid; place-items: center;
+  margin-bottom: 24px;
+  color: var(--terra);
+}
+.step-icon svg { width: 32px; height: 32px; }
+.step-time {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--olive); margin-bottom: 12px;
+}
+.step-title {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  font-size: 26px; line-height: 1.15;
+  letter-spacing: -0.01em; margin: 0 0 12px;
+}
+.step-body { color: var(--ink-soft); font-size: 15px; margin: 0; }
+
+/* ============ MENU ============ */
+.menu-section { background: var(--cream); position: relative; }
+.menu-card {
+  max-width: 760px; margin: 0 auto;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 56px 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(27, 22, 17, .06);
+  position: relative;
+}
+.menu-card::before, .menu-card::after {
+  content: '✿'; position: absolute;
+  font-family: 'Fraunces', serif;
+  color: var(--terra); font-size: 28px;
+}
+.menu-card::before { top: 20px; left: 24px; }
+.menu-card::after { bottom: 20px; right: 24px; transform: rotate(180deg); }
+
+@media (min-width: 720px) {
+  .menu-card { padding: 72px 64px; }
+}
+
+.menu-head { text-align: center; margin-bottom: 40px; }
+.menu-head .small {
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.menu-head h3 {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0; letter-spacing: -0.02em;
+}
+.menu-price {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  margin-top: 20px;
+  font-family: 'Fraunces', serif;
+}
+.menu-price .euro {
+  font-size: 20px; color: var(--ink-soft);
+}
+.menu-price .num {
+  font-size: 56px; line-height: 1; font-weight: 500;
+  color: var(--terra);
+}
+.menu-price .per { font-size: 16px; color: var(--ink-soft); margin-left: 4px; }
+
+.menu-list { display: grid; gap: 32px; }
+.menu-row { display: grid; gap: 8px; }
+.menu-row .course {
+  font-family: 'Fraunces', serif; font-style: italic; font-weight: 500;
+  font-size: 14px; letter-spacing: 0.05em; color: var(--terra);
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 12px;
+}
+.menu-row .course::after {
+  content: ''; flex: 1; height: 1px; background: rgba(184, 71, 47, .25);
+}
+.menu-row .dish {
+  font-family: 'Fraunces', serif; font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 400; line-height: 1.25;
+  margin: 0;
+}
+.menu-row .dish-note {
+  font-size: 14px; color: var(--ink-soft); margin: 0;
+}
+
+.menu-included {
+  margin-top: 40px; padding-top: 32px;
+  border-top: 1px dashed rgba(27, 22, 17, .15);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  font-size: 14px; color: var(--ink-soft);
+}
+@media (min-width: 720px) { .menu-included { grid-template-columns: repeat(4, 1fr); } }
+.menu-included div { display: flex; align-items: center; gap: 8px; }
+.menu-included svg { width: 16px; height: 16px; color: var(--olive); flex-shrink: 0; }
+
+.menu-veg-note {
+  margin-top: 28px;
+  background: rgba(91, 107, 47, .08);
+  border-left: 3px solid var(--olive);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ============ GALLERY ============ */
+.gallery-section { background: var(--cream); padding-top: 0; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  grid-auto-rows: 140px;
+}
+@media (min-width: 720px) { .gallery { grid-auto-rows: 180px; gap: 18px; } }
+
+.gallery-tile {
+  background: var(--cream-2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  display: block;
+  transition: transform .4s ease, box-shadow .4s ease;
+  cursor: pointer;
+}
+.gallery-tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s cubic-bezier(.4,0,.2,1);
+}
+.gallery-tile:hover { box-shadow: var(--shadow); }
+.gallery-tile:hover img { transform: scale(1.06); }
+.gallery-tile::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(27,22,17,.18) 100%);
+  opacity: 0; transition: opacity .4s ease;
+  pointer-events: none;
+}
+.gallery-tile:hover::after { opacity: 1; }
+.g-1 { grid-column: span 3; grid-row: span 2; }
+.g-2 { grid-column: span 3; grid-row: span 1; }
+.g-3 { grid-column: span 2; grid-row: span 1; }
+.g-4 { grid-column: span 1; grid-row: span 1; }
+.g-5 { grid-column: span 2; grid-row: span 2; }
+.g-6 { grid-column: span 2; grid-row: span 1; }
+.g-7 { grid-column: span 2; grid-row: span 1; }
+
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .g-1, .g-2, .g-3, .g-4, .g-5, .g-6, .g-7 { grid-column: span 1; grid-row: span 1; }
+  .g-1, .g-5 { grid-column: span 2; grid-row: span 2; }
+}
+
+/* ============ DOVE SIAMO ============ */
+.dove { background: var(--paper); }
+.dove-grid {
+  display: grid; gap: 40px;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+@media (min-width: 880px) {
+  .dove-grid { grid-template-columns: 1fr 1.2fr; gap: 56px; }
+}
+
+.dove-info h3 {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 24px; letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.dove-info p { color: var(--ink-soft); margin: 0 0 28px; }
+.dove-info .address-block {
+  background: var(--cream);
+  padding: 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(27, 22, 17, .06);
+  margin-bottom: 24px;
+}
+.dove-info .address-block .label {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--terra); font-weight: 700; margin-bottom: 8px;
+}
+.dove-info .address-block .addr {
+  font-family: 'Fraunces', serif; font-size: 20px; line-height: 1.35;
+  margin: 0 0 4px;
+}
+.dove-info .address-block .city { color: var(--ink-soft); font-size: 15px; }
+
+.dove-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.map-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 380px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(27, 22, 17, .08);
+}
+.map-wrap iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; border: 0;
+  filter: saturate(0.9) contrast(0.95);
+}
+
+.travel-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 14px;
+}
+.travel-list li {
+  display: flex; gap: 14px; align-items: start;
+  font-size: 15px;
+}
+.travel-list .ic {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--cream-2);
+  display: grid; place-items: center; flex-shrink: 0;
+  color: var(--terra);
+}
+.travel-list .ic svg { width: 18px; height: 18px; }
+.travel-list strong { display: block; margin-bottom: 2px; }
+.travel-list .muted { color: var(--ink-soft); font-size: 13px; }
+
+/* ============ FORM ============ */
+.book {
+  background: var(--ink); color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.book::before {
+  content: ''; position: absolute; right: -200px; top: -200px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 71, 47, .25) 0%, transparent 65%);
+  pointer-events: none;
+}
+.book::after {
+  content: ''; position: absolute; left: -150px; bottom: -150px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 154, 46, .15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.book .section-eyebrow { color: var(--gold); }
+.book .section-eyebrow::before, .book .section-eyebrow::after { background: var(--gold); }
+.book .section-title { color: var(--paper); }
+.book .section-title .italic { color: var(--gold); }
+.book .section-lead { color: rgba(250, 246, 236, .7); }
+
+.book-grid {
+  display: grid; gap: 48px;
+  grid-template-columns: 1fr;
+  position: relative; z-index: 1;
+}
+@media (min-width: 980px) {
+  .book-grid { grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
+}
+
+.urgency-card {
+  background: rgba(250, 246, 236, .06);
+  border: 1px solid rgba(250, 246, 236, .12);
+  border-radius: var(--radius);
+  padding: 32px;
+  backdrop-filter: blur(10px);
+}
+.urgency-card h4 {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: 24px; line-height: 1.2;
+  margin: 0 0 16px; color: var(--paper);
+}
+.urgency-card p { color: rgba(250, 246, 236, .7); margin: 0 0 24px; font-size: 15px; }
+.urgency-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-top: 24px;
+}
+.urgency-stat {
+  background: rgba(250, 246, 236, .04);
+  border: 1px solid rgba(250, 246, 236, .08);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+}
+.urgency-stat .big {
+  font-family: 'Fraunces', serif; font-size: 32px;
+  color: var(--gold); line-height: 1;
+  margin-bottom: 6px;
+}
+.urgency-stat .lbl {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;
+  color: rgba(250, 246, 236, .6);
+}
+
+.urgency-bar {
+  height: 8px; border-radius: 999px;
+  background: rgba(250, 246, 236, .1);
+  overflow: hidden; margin: 24px 0 12px;
+}
+.urgency-bar-fill {
+  height: 100%; width: 68%;
+  background: linear-gradient(90deg, var(--gold), var(--terra));
+  border-radius: 999px;
+}
+.urgency-bar-label {
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: rgba(250, 246, 236, .6);
+}
+.urgency-points {
+  list-style: none; padding: 0; margin: 24px 0 0;
+  display: grid; gap: 14px;
+}
+.urgency-points li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 15px; color: rgba(250, 246, 236, .82);
+  line-height: 1.4;
+}
+.urgency-points li strong { color: var(--paper); }
+.urgency-points svg {
+  width: 20px; height: 20px; color: var(--gold);
+  flex-shrink: 0; margin-top: 1px;
+}
+.book .form strong { color: var(--ink); }
+
+.form {
+  background: var(--paper); color: var(--ink);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 90px; /* spazio sotto la topbar quando si clicca "Prenota" */
+}
+@media (min-width: 720px) { .form { padding: 48px 44px; } }
+
+.form-title {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: 28px; line-height: 1.15;
+  margin: 0 0 8px; letter-spacing: -0.015em;
+}
+.form-sub { color: var(--ink-soft); margin: 0 0 28px; font-size: 15px; }
+
+.field-grid {
+  display: grid; gap: 16px;
+}
+.field-row { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 600px) { .field-row { grid-template-columns: 1fr 1fr; } }
+
+.field { display: grid; gap: 6px; }
+.field label {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-soft); font-weight: 700;
+}
+.field label .req { color: var(--terra); }
+.field input,
+.field textarea,
+.field select {
+  font-family: inherit; font-size: 16px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(27, 22, 17, .12);
+  background: var(--cream);
+  color: var(--ink);
+  transition: border-color .2s ease, background .2s ease;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none; border-color: var(--terra);
+  background: var(--paper);
+}
+.field textarea { resize: vertical; min-height: 84px; }
+
+.persone-stepper {
+  display: flex; align-items: center; gap: 0;
+  border: 1.5px solid rgba(27, 22, 17, .12);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--cream);
+}
+.persone-stepper button {
+  width: 50px; height: 48px;
+  font-size: 22px; font-weight: 500; color: var(--terra);
+  display: grid; place-items: center;
+  transition: background .2s ease;
+}
+.persone-stepper button:hover { background: rgba(184, 71, 47, .08); }
+.persone-stepper input {
+  border: 0; text-align: center; flex: 1;
+  background: transparent;
+  font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500;
+  padding: 0; height: 48px;
+}
+.persone-stepper input:focus { background: transparent; }
+
+.consent {
+  margin-top: 8px;
+  font-size: 13px; color: var(--ink-soft);
+  display: flex; gap: 10px; align-items: start;
+}
+.consent input { margin-top: 3px; }
+.consent a { text-decoration: underline; }
+
+.form .btn-primary { width: 100%; padding: 18px 22px; font-size: 16px; margin-top: 8px; }
+
+.form-foot {
+  margin-top: 20px; padding-top: 20px;
+  border-top: 1px dashed rgba(27, 22, 17, .15);
+  display: grid; gap: 10px;
+  font-size: 13px; color: var(--ink-soft);
+}
+.form-foot div { display: flex; gap: 10px; align-items: center; }
+.form-foot svg { width: 16px; height: 16px; color: var(--olive); flex-shrink: 0; }
+
+/* ============ FAQ ============ */
+.faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+.faq-item {
+  background: var(--paper);
+  border: 1px solid rgba(27, 22, 17, .08);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.faq-q {
+  width: 100%; text-align: left;
+  padding: 22px 24px;
+  font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq-q .plus {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--cream); color: var(--terra);
+  display: grid; place-items: center; flex-shrink: 0;
+  font-family: 'Manrope', sans-serif; font-size: 18px; line-height: 1;
+  transition: transform .25s ease;
+}
+.faq-a {
+  max-height: 0; overflow: hidden;
+  padding: 0 24px;
+  color: var(--ink-soft); font-size: 15px;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.faq-item.open .plus { transform: rotate(45deg); background: var(--terra); color: var(--paper); }
+.faq-item.open .faq-a { max-height: 320px; padding: 0 24px 22px; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--ink); color: rgba(250, 246, 236, .7);
+  padding: 60px 0 120px;
+  text-align: center;
+}
+.footer .brand { justify-content: center; color: var(--paper); margin-bottom: 16px; }
+.footer p { margin: 0 0 8px; font-size: 14px; }
+.footer .socials {
+  display: inline-flex; gap: 12px; margin-top: 20px;
+}
+.footer .socials a {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(250, 246, 236, .08);
+  display: grid; place-items: center;
+  transition: background .2s ease, transform .2s ease;
+}
+.footer .socials a:hover { background: var(--terra); transform: translateY(-2px); }
+.footer .socials svg { width: 18px; height: 18px; color: var(--paper); }
+.footer .copy {
+  margin-top: 28px; font-size: 12px; opacity: 0.6;
+}
+
+/* ============ STICKY MOBILE CTA ============ */
+.sticky-cta {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: var(--paper);
+  border-top: 1px solid rgba(27, 22, 17, .1);
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  z-index: 40;
+  box-shadow: 0 -20px 40px -20px rgba(27, 22, 17, .15);
+  display: flex; gap: 12px; align-items: center;
+}
+.sticky-cta-info {
+  flex: 1; min-width: 0;
+}
+.sticky-cta-info .top {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terra);
+  font-weight: 700;
+}
+.sticky-cta-info .bot {
+  font-family: 'Fraunces', serif; font-size: 16px; font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sticky-cta .btn { padding: 12px 18px; font-size: 14px; }
+@media (min-width: 720px) {
+  .sticky-cta { display: none; }
+}
+body { padding-bottom: 80px; }
+@media (min-width: 720px) { body { padding-bottom: 0; } }
+
+/* ============ SUCCESS MODAL ============ */
+.modal-bg {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(27, 22, 17, .7);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+  max-width: 480px; width: 100%;
+  text-align: center;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+  animation: pop .4s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.modal .check {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--olive); color: var(--paper);
+  margin: 0 auto 24px;
+  display: grid; place-items: center;
+  font-size: 40px;
+}
+.modal h3 {
+  font-family: 'Fraunces', serif; font-weight: 400;
+  font-size: 32px; margin: 0 0 12px; letter-spacing: -0.02em;
+}
+.modal p { color: var(--ink-soft); margin: 0 0 24px; }
+.modal .next-steps {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.modal .next-steps strong { color: var(--ink); display: block; margin-bottom: 8px; font-family: 'Fraunces', serif; font-size: 16px; }
+.modal .next-steps ul { margin: 0; padding-left: 20px; }
+.modal .next-steps li { margin-bottom: 6px; }
+
+/* ============ ANIMATIONS ============ */
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>L'Aretta</span>
+    </a>
+    <div class="topbar-chip">
+      <span class="dot"></span>
+      Domenica 14 giugno · posti limitati
+    </div>
+    <a href="#prenota" class="btn btn-primary btn-sm">
+      Prenota il tavolo
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ MARQUEE (sotto topbar) ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Cucina della tradizione locale</span>
+    <span class="marquee-item">Ulivi secolari, terra rossa, niente fretta</span>
+    <span class="marquee-item">A 50 minuti da Roma</span>
+    <span class="marquee-item">La domenica si riempie — prenota in tempo</span>
+    <span class="marquee-item">Cucina della tradizione locale</span>
+    <span class="marquee-item">Ulivi secolari, terra rossa, niente fretta</span>
+    <span class="marquee-item">A 50 minuti da Roma</span>
+    <span class="marquee-item">La domenica si riempie — prenota in tempo</span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        La domenica in campagna · Roccantica
+      </div>
+      <h1 class="serif">
+        Una domenica <span class="italic">lunga</span><br>
+        in campagna.
+      </h1>
+      <p class="hero-sub">
+        La <span class="hl">domenica</span> apriamo il pergolato de L'Aretta per il pranzo in campagna.
+        <strong>Tre portate</strong>, <strong>mezzo litro di vino e caffè inclusi</strong>. Lascia l'<strong>afa della città</strong> e prenditi una giornata intera tra gli ulivi.
+      </p>
+
+      <div class="hero-meta">
+        <span class="meta-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span class="mp-full">Domenica 14 giugno 2026</span>
+          <span class="mp-short">Dom 14 giu</span>
+        </span>
+        <span class="meta-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span class="mp-full">Dalle 12:00 in poi</span>
+          <span class="mp-short">Dalle 12:00</span>
+        </span>
+        <span class="meta-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7.5a8 8 0 100 9"/><path d="M3 10.5h10M3 13.5h10"/></svg>
+          <span class="mp-full">€35 a persona</span>
+          <span class="mp-short">€35</span>
+        </span>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#prenota" class="btn btn-primary">
+          Prenota il tuo tavolo
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#menu" class="btn btn-ghost">
+          Vedi il menù
+        </a>
+      </div>
+
+      <!-- Countdown inline sotto CTA -->
+      <div class="hero-countdown" id="countdown" aria-label="Tempo rimanente all'evento">
+        <span class="hcd-label">Manca</span>
+        <div class="hcd-cells">
+          <div class="hcd-cell"><span class="hcd-num" id="cd-days">--</span><span class="hcd-lbl">g</span></div>
+          <span class="hcd-sep">·</span>
+          <div class="hcd-cell"><span class="hcd-num" id="cd-hours">--</span><span class="hcd-lbl">h</span></div>
+          <span class="hcd-sep">·</span>
+          <div class="hcd-cell"><span class="hcd-num" id="cd-mins">--</span><span class="hcd-lbl">min</span></div>
+          <span class="hcd-sep">·</span>
+          <div class="hcd-cell"><span class="hcd-num" id="cd-secs">--</span><span class="hcd-lbl">sec</span></div>
+        </div>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-dots">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="rating">
+          <div class="rating-row">
+            <span class="stars" aria-label="4.7 stelle su 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7 7 .9-5.2 4.8 1.4 7L12 18l-6.2 3.7 1.4-7L2 9.9 9 9z"/></svg>
+            </span>
+            <span class="rating-score">4.7</span>
+          </div>
+          <span class="rating-count">su 5 · oltre 200 recensioni Google</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video di background: su desktop sta a destra (absolute), su mobile sotto al testo (relative) -->
+  <div class="hero-bg-video" id="heroVideo">
+    <video
+      autoplay muted loop playsinline preload="metadata"
+      disablepictureinpicture disableremoteplayback
+      poster="assets/Panoramica_aretta_v.2-poster.jpg"
+      aria-hidden="true" tabindex="-1">
+      <source src="assets/Panoramica_aretta_v.2.mp4" type="video/mp4">
+    </video>
+    <p class="hero-video-caption">«L'aria di Roccantica, prima ancora del primo piatto.»</p>
+  </div>
+</section>
+
+
+<!-- ============ GIORNATA ============ -->
+<section class="section giornata" id="giornata">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Come va la giornata</div>
+      <h2 class="section-title">Un pranzo che <span class="italic serif">dura quanto vuoi.</span></h2>
+      <p class="section-lead">Si entra <span class="hl">dalle 12:00</span>, si esce quando torna la frescura. <strong>Niente turni, niente fretta.</strong> Solo il tempo di una giornata fatta come una volta.</p>
+    </div>
+
+    <div class="giornata-grid">
+      <div class="step-card reveal">
+        <div class="step-num serif">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11h18M5 11V7a7 7 0 0114 0v4M7 21h10l1-6H6l1 6z"/></svg>
+        </div>
+        <div class="step-time">Dalle 12:00</div>
+        <h3 class="step-title">Il pranzo della domenica</h3>
+        <p class="step-body"><strong>Tre portate</strong> sotto il pergolato. <strong>Ingredienti del giorno</strong>, ricette di casa, le <strong>erbe spontanee</strong> raccolte dallo chef nei boschi qui sopra.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num serif">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <div class="step-time">Fino al tramonto</div>
+        <h3 class="step-title">Si resta. Punto.</h3>
+        <p class="step-body">Caffè, una <strong>camminata tra gli ulivi</strong> se ti va. I bambini giocano in giardino, gli adulti raccontano. <strong>Si va via quando si vuole.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="section menu-section" id="menu">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Il menù del giorno</div>
+      <h2 class="section-title">Tre portate, <span class="italic serif">tutto incluso.</span></h2>
+      <p class="section-lead">Un <strong>menù fisso</strong>, pensato per restare a tavola con calma. Il piatto cambia con la stagione e con quello che troviamo in mattinata al <strong>mercato di Poggio Mirteto</strong>.</p>
+    </div>
+
+    <div class="menu-card reveal">
+      <div class="menu-head">
+        <div class="small">Pranzo della domenica · 14 giugno 2026</div>
+        <h3 class="serif">Il pranzo de L'Aretta</h3>
+        <div class="menu-price">
+          <span class="euro">€</span><span class="num">35</span><span class="per">a persona</span>
+        </div>
+      </div>
+
+      <div class="menu-list">
+        <div class="menu-row">
+          <div class="course">Antipasto</div>
+          <h4 class="dish">Tagliere di <strong>salumi e formaggi locali</strong></h4>
+          <p class="dish-note">Prodotti del territorio, da dividere e gustare con calma</p>
+        </div>
+
+        <div class="menu-row">
+          <div class="course">Primo</div>
+          <h4 class="dish">Fettuccine al <strong>sugo di maiale</strong> con erbe spontanee</h4>
+          <p class="dish-note">Erbe raccolte dallo <strong>chef</strong> nei boschi qui sopra, pasta tirata a mano <strong>stamattina</strong></p>
+        </div>
+
+        <div class="menu-row">
+          <div class="course">Secondo</div>
+          <h4 class="dish"><strong>Grigliata mista</strong> di pecora e maiale</h4>
+          <p class="dish-note"><strong>Carni locali di prima qualità</strong>, cotte sulla brace, servite con pane caldo</p>
+        </div>
+      </div>
+
+      <div class="menu-included">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>1/2 litro di vino</strong> a persona</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Acqua a volontà</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Caffè</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Pane fatto in casa</div>
+      </div>
+
+      <div class="menu-veg-note">
+        <strong>Vegetariani e bambini:</strong> nel menù alcune portate sono <strong>vegetariane</strong>, e c'è un <strong>menù bambini dedicato</strong>. Indicacelo nelle note della prenotazione.
+      </div>
+
+      <div style="text-align:center; margin-top:36px;">
+        <a href="#prenota" class="btn btn-primary">
+          Prenota il tuo tavolo
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Uno sguardo</div>
+      <h2 class="section-title">L'Aretta, <span class="italic serif">in qualche foto.</span></h2>
+      <p class="section-lead">Il giardino, gli ulivi, il pergolato, la cucina. Tutto quello che troverai la domenica.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-tile g-1"><img src="assets/new-04.jpg" alt="L'Aretta vista panoramica" loading="lazy"></div>
+      <div class="gallery-tile g-2"><img src="assets/new-01.jpg" alt="Tavolo apparecchiato L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-3"><img src="assets/new-05-vert.jpg" alt="Dettaglio verticale L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-4"><img src="assets/new-02.jpg" alt="Atmosfera L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-5"><img src="assets/new-03.jpg" alt="Dettaglio cucina L'Aretta" loading="lazy"></div>
+      <div class="gallery-tile g-6"><img src="assets/gallery-04.jpg" alt="Vista sui colli dal pergolato" loading="lazy"></div>
+      <div class="gallery-tile g-7"><img src="assets/gallery-06.jpg" alt="Pergolato e collina" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOVE SIAMO ============ -->
+<section class="section dove" id="dove">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Come arrivare</div>
+      <h2 class="section-title">A <span class="italic serif">cinquanta minuti</span> da Roma.</h2>
+      <p class="section-lead">Roccantica è un borgo della <strong>Sabina</strong>, su una collina d'ulivi. Da Roma sono <span class="hl">50 minuti</span> in auto. La strada vale già il viaggio.</p>
+    </div>
+
+    <div class="dove-grid">
+      <div class="dove-info reveal">
+        <div class="address-block">
+          <div class="label">L'indirizzo</div>
+          <p class="addr serif">L'Aretta Ristorante</p>
+          <p class="city">Via Marta Robbio Tacci · 02040 Roccantica (RI)</p>
+        </div>
+
+        <ul class="travel-list">
+          <li>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h11l4 5h2v6h-2"/></svg></div>
+            <div>
+              <strong>In auto da Roma</strong>
+              <span class="muted">A1 → uscita <span class="kw">Ponzano Romano</span> → SS313 verso Rieti, ~<span class="kw">50 minuti</span>.</span>
+            </div>
+          </li>
+          <li>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 19v2M15 19v2"/></svg></div>
+            <div>
+              <strong>In treno</strong>
+              <span class="muted">Stazione di <span class="kw">Poggio Mirteto Scalo</span> (FL1), poi <span class="kw">15 minuti</span> in taxi o navetta su richiesta.</span>
+            </div>
+          </li>
+          <li>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <strong>Coordinate GPS</strong>
+              <span class="muted"><span class="kw">42.3236° N, 12.7158° E</span> — segui le indicazioni per "Centro storico Roccantica".</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="dove-actions" style="margin-top: 28px;">
+          <a href="https://www.google.com/maps/place/L'Aretta/@42.3236,12.7158,17z" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+            Apri in Google Maps
+            <span class="btn-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=12.6858%2C42.3036%2C12.7458%2C42.3436&layer=mapnik&marker=42.3236%2C12.7158"
+          loading="lazy"
+          title="Mappa di Roccantica"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="section book">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Prenotazione</div>
+      <h2 class="section-title">Prenota <span class="italic serif">il tuo tavolo.</span></h2>
+      <p class="section-lead">Compila il form, la <strong>prenotazione è automatica</strong>. Ti scriviamo <strong>un giorno prima</strong> per ricordarti l'appuntamento.</p>
+    </div>
+
+    <div class="book-grid">
+      <div class="urgency-card reveal">
+        <h4>Pochi tavoli, niente turni.</h4>
+        <p>La <strong>domenica</strong> apriamo <strong>giardino e pergolato</strong>, ma i posti sotto le piante non sono infiniti. Quando i tavoli finiscono, chiudiamo le prenotazioni per quel giorno.</p>
+        <ul class="urgency-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>Conferma <strong>immediata</strong>, nessuna attesa</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>Promemoria via email <strong>il giorno prima</strong></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span>Annulli quando vuoi, <strong>fino a 24h prima</strong></span></li>
+        </ul>
+      </div>
+
+      <form class="form reveal" id="prenota" action="REPLACE_WITH_APPS_SCRIPT_URL" method="POST">
+        <h3 class="form-title">Prenota il tuo tavolo</h3>
+        <p class="form-sub"><span class="hl">Domenica 14 giugno 2026</span> · <span class="kw">dalle 12:00</span></p>
+
+        <!-- hidden fields for Formspree -->
+        <input type="hidden" name="_subject" value="Nuova prenotazione · domenica 14 giugno 2026">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="evento" value="Pranzo domenica 14 giugno 2026">
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="nome">Nome e cognome <span class="req">*</span></label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Mario Rossi">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="tel">Telefono <span class="req">*</span></label>
+              <input type="tel" id="tel" name="telefono" required autocomplete="tel" inputmode="tel" placeholder="+39 ...">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="nome@email.it">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="persone">Numero persone <span class="req">*</span></label>
+            <div class="persone-stepper">
+              <button type="button" aria-label="Diminuisci" onclick="changePersone(-1)">−</button>
+              <input type="number" id="persone" name="persone" value="2" min="1" max="20" inputmode="numeric" required>
+              <button type="button" aria-label="Aumenta" onclick="changePersone(1)">+</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="note">Note (allergie, bambini, occasione speciale)</label>
+            <textarea id="note" name="note" placeholder="Es: una persona vegetariana, un seggiolone per bambino di 2 anni, compleanno..."></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>Accetto la <a href="https://aretta.it/privacy" target="_blank" rel="noopener">privacy policy</a> e il trattamento dei dati per la prenotazione.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">
+            <span id="submit-text">Conferma la prenotazione</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+
+        <div class="form-foot">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span><strong>Conferma immediata</strong></span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span><strong>Promemoria 24h prima</strong></span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L9 15l-5-5"/></svg> <span><strong>Annullabile fino a 24h prima</strong></span></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq" style="background: var(--paper);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Domande frequenti</div>
+      <h2 class="section-title">Le cose che <span class="italic serif">ci chiedete</span> di solito.</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Posso modificare o annullare la prenotazione?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Certo. Basta avvisarci <strong>almeno 24 ore prima</strong> dell'evento scrivendoci su <strong>WhatsApp</strong>. <strong>Niente penali</strong>, capita.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>I bambini pagano l'intero?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Per i bambini c'è un <strong>menù dedicato</strong>: <strong>cotoletta, patatine, una bevanda e acqua</strong> a <span class="hl">€15</span>. Indicalo nelle note della prenotazione.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Ci sono opzioni vegetariane o per intolleranze?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Nel nostro menù <strong>alcune portate sono vegetariane</strong>. Se preferisci queste opzioni indicalo nel campo <span class="kw">"Note"</span> della prenotazione e ti consigliamo le portate adatte. <strong>Non gestiamo menù per celiaci, vegani o intolleranze specifiche.</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Si paga in anticipo?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Il pagamento è <strong>al ristorante al momento dell'ordinazione</strong>. Accettiamo <strong>contante, carte e bancomat</strong>. La prenotazione è <strong>gratuita</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Quanto dura il pranzo? Ho un orario di uscita?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p><strong>No, nessun turno.</strong> Si entra <span class="hl">dalle 12:00</span> e si esce quando si vuole. La media è <strong>3-4 ore</strong>, ma c'è chi resta fino a sera in giardino.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Posso venire da solo/a?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <p><strong>Assolutamente sì.</strong> Abbiamo <strong>tavoli da 2 e da 1</strong>, sotto il pergolato o in giardino. Specifica nelle note se preferisci un posto più tranquillo o più centrale.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:56px;">
+      <p style="color:var(--ink-soft); margin-bottom:20px;">Altre domande? Scrivici direttamente.</p>
+      <a href="https://wa.me/393462880804" target="_blank" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.6-.5h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8 1.5.6 2.1.7 2.9.6.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Scrivici su WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>L'Aretta</span>
+    </div>
+    <p class="serif italic" style="font-size:20px; color:var(--paper);">«Si mangia bene, si sta meglio»</p>
+    <p>Ristorante in campagna · Roccantica (RI)</p>
+
+    <div class="socials">
+      <a href="https://facebook.com/arettaroccantica" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7c4.7-.8 8.4-4.9 8.4-9.9z"/></svg>
+      </a>
+      <a href="https://wa.me/393462880804" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.6-.5h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8 1.5.6 2.1.7 2.9.6.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      </a>
+      <a href="https://instagram.com/arettaroccantica" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 11-7.9 1.2A4 4 0 0116 11.4zM17.5 6.5h.01"/></svg>
+      </a>
+    </div>
+
+    <div class="copy">© 2026 L'Aretta · Roccantica (RI) · P.IVA xxxxxxxxxxx</div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="sticky-cta">
+  <div class="sticky-cta-info">
+    <div class="top">Dom 14 giugno · €35</div>
+    <div class="bot serif">Prenota il tuo tavolo</div>
+  </div>
+  <a href="#prenota" class="btn btn-primary">Prenota →</a>
+</div>
+
+<!-- Modal di successo rimosso: ora il submit redireziona a thank-you.html -->
+
+<!-- ============ SCRIPT ============ -->
+<script>
+// ============ HERO VIDEO GUARD (impedisce stop utente) ============
+(function () {
+  const v = document.querySelector('.hero-bg-video video');
+  if (!v) return;
+  const replay = () => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(()=>{}); };
+  v.addEventListener('pause', () => setTimeout(replay, 50));
+  v.addEventListener('ended', replay);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) replay(); });
+  // primo avvio in caso autoplay sia stato bloccato
+  setTimeout(replay, 100);
+})();
+
+// ============ COUNTDOWN ============
+(function () {
+  const target = new Date('2026-06-14T12:00:00+02:00').getTime();
+  const elDays = document.getElementById('cd-days');
+  const elHours = document.getElementById('cd-hours');
+  const elMins = document.getElementById('cd-mins');
+  const elSecs = document.getElementById('cd-secs');
+
+  function pad(n) { return String(Math.max(0, n)).padStart(2, '0'); }
+
+  function tick() {
+    const now = Date.now();
+    let diff = target - now;
+    if (diff < 0) diff = 0;
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    elDays.textContent = pad(d);
+    elHours.textContent = pad(h);
+    elMins.textContent = pad(m);
+    elSecs.textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ============ STEPPER ============
+function changePersone(delta) {
+  const input = document.getElementById('persone');
+  let v = parseInt(input.value || '1', 10);
+  v = Math.min(20, Math.max(1, v + delta));
+  input.value = v;
+}
+
+// ============ FAQ ============
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  item.classList.toggle('open');
+}
+
+// ============ MODAL ============
+function closeModal() {
+  document.getElementById('successModal').classList.remove('show');
+}
+
+// ============ FORM SUBMIT — redirect a thank-you.html ============
+(function () {
+  const form = document.getElementById('prenota');
+  const submitText = document.getElementById('submit-text');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    submitText.textContent = 'Invio in corso...';
+
+    const fd = new FormData(form);
+    const action = form.action;
+    const params = new URLSearchParams({
+      nome: fd.get('nome') || '',
+      persone: fd.get('persone') || ''
+    });
+
+    // Se endpoint ancora placeholder, simula successo (utile per anteprima)
+    if (action.includes('REPLACE_WITH_APPS_SCRIPT_URL')) {
+      console.warn('Form action è ancora un placeholder. Sostituiscilo con l\'URL del tuo Apps Script.');
+      await new Promise(r => setTimeout(r, 600));
+      window.location.href = 'grazie.html?' + params.toString();
+      return;
+    }
+
+    try {
+      // Apps Script accetta POST, ritorna JSON. mode no-cors evita preflight ma blocca lettura risposta —
+      // accettiamolo: se la fetch non esplode, consideriamo l'invio andato a buon fine.
+      await fetch(action, {
+        method: 'POST',
+        body: fd,
+        mode: 'no-cors'
+      });
+      window.location.href = 'grazie.html?' + params.toString();
+    } catch (err) {
+      submitText.textContent = 'Conferma la prenotazione';
+      alert('Errore di rete. Riprova fra qualche istante o scrivici su WhatsApp.');
+    }
+  });
+})();
+
+// ============ REVEAL ON SCROLL ============
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
+
+// ============ URGENCY rimossa: nessuna barra percentuale finta su una domenica ordinaria ============
+</script>
+</body>
+</html>
